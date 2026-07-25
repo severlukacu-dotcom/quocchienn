@@ -1,58 +1,44 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-echo "======================================="
-echo " Building Sileo Repository"
-echo "======================================="
+echo "=================================="
+echo "Building Sileo Repository"
+echo "=================================="
 
-# Cleanup
 rm -f Packages Packages.gz Packages.bz2 Release
-rm -rf .tmp_repo
 mkdir -p .tmp_repo
 
 VALID=0
-INVALID=0
 
 if [ -d "debs" ]; then
-    echo "Scanning .deb packages..."
 
-    shopt -s nullglob
+    for pkg in debs/*.deb
+    do
+        [ -f "$pkg" ] || continue
 
-    for pkg in debs/*.deb; do
-        echo "Checking: $(basename "$pkg")"
+        echo "Checking $(basename "$pkg")"
 
-        if dpkg-deb --info "$pkg" >/dev/null 2>&1; then
-            echo "  ✓ Valid"
+        if dpkg-deb --info "$pkg" >/dev/null 2>&1
+        then
+            echo "✓ Valid"
             cp "$pkg" .tmp_repo/
-            ((VALID++))
+            VALID=$((VALID+1))
         else
-            echo "  ✗ Invalid (Skipped)"
-            ((INVALID++))
+            echo "✗ Invalid (Skipped)"
         fi
+
     done
 
-    if [ "$VALID" -gt 0 ]; then
-        echo ""
-        echo "Generating Packages..."
-
-        dpkg-scanpackages -m .tmp_repo /dev/null > Packages
-
-        gzip -9 -kf Packages
-        bzip2 -9 -kf Packages
-    else
-        echo "No valid packages found."
-        touch Packages
-        gzip -9 -kf Packages
-        bzip2 -9 -kf Packages
-    fi
-
-else
-    echo "debs folder not found."
-
-    touch Packages
-    gzip -9 -kf Packages
-    bzip2 -9 -kf Packages
 fi
+
+if [ "$VALID" -gt 0 ]
+then
+    dpkg-scanpackages -m .tmp_repo /dev/null > Packages
+else
+    touch Packages
+fi
+
+gzip -kf Packages
+bzip2 -kf Packages
 
 cat > Release <<EOF
 Origin: Sileo Repo
@@ -66,9 +52,5 @@ Description: Modern Sileo Repository
 Date: $(date -Ru)
 EOF
 
-echo ""
-echo "======================================="
-echo " Valid Packages  : $VALID"
-echo " Invalid Packages: $INVALID"
-echo "======================================="
-echo "Repository build completed!"
+echo "Done."
+exit 0
