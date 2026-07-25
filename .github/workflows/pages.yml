@@ -1,0 +1,70 @@
+name: Deploy Sileo Repo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dpkg-dev gzip bzip2
+
+      - name: Build repository
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Prepare Pages
+        run: |
+          mkdir site
+
+          cp -r debs site/ || true
+          cp Packages* site/ || true
+          cp Release site/ || true
+
+          if [ -f index.html ]; then
+            cp index.html site/
+          fi
+
+          if [ -d depictions ]; then
+            cp -r depictions site/
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,37 +1,27 @@
 #!/usr/bin/env bash
 set -e
 
-echo "=============================="
-echo "Building Sileo Repository"
-echo "=============================="
+echo "Building repository..."
 
 rm -f Packages Packages.gz Packages.bz2 Release
 rm -rf .tmp_repo
-mkdir -p .tmp_repo
+
+mkdir .tmp_repo
 
 VALID=0
 
-if [ -d debs ]; then
-    echo "Scanning packages..."
+for f in debs/*.deb
+do
+    [ -f "$f" ] || continue
 
-    for pkg in debs/*.deb
-    do
-        [ -f "$pkg" ] || continue
-
-        echo "Checking $(basename "$pkg")"
-
-        if dpkg-deb --info "$pkg" >/dev/null 2>&1
-        then
-            echo "✓ Valid"
-
-            cp "$pkg" .tmp_repo/
-
-            VALID=$((VALID+1))
-        else
-            echo "✗ Invalid (Skipped)"
-        fi
-    done
-fi
+    if dpkg-deb --info "$f" >/dev/null 2>&1
+    then
+        cp "$f" .tmp_repo/
+        VALID=$((VALID+1))
+    else
+        echo "Skip invalid: $f"
+    fi
+done
 
 if [ "$VALID" -gt 0 ]
 then
@@ -42,8 +32,8 @@ else
     touch Packages
 fi
 
-gzip -9 -kf Packages
-bzip2 -9 -kf Packages
+gzip -kf Packages
+bzip2 -kf Packages
 
 cat > Release <<EOF
 Origin: QuocChien Repo
@@ -53,10 +43,8 @@ Version: 1.0
 Codename: stable
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: QuocChien Sileo Repository
+Description: QuocChien Repository
 Date: $(date -Ru)
 EOF
 
-echo
-echo "Packages: $VALID"
 echo "Done."
