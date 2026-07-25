@@ -4,32 +4,34 @@ on:
   push:
     branches:
       - main
+
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
+
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: true
 
-      - name: Install dependencies
+      - name: Install dpkg-dev
         run: |
           sudo apt-get update
-          sudo apt-get install -y dpkg-dev bzip2 gzip
+          sudo apt-get install -y dpkg-dev gzip bzip2
 
-      - name: Make build script executable
-        run: chmod +x build.sh
-
-      - name: Build repository
-        run: ./build.sh
+      - name: Run build
+        run: |
+          chmod +x build.sh
+          ./build.sh
 
       - name: Commit changes
         run: |
@@ -38,11 +40,12 @@ jobs:
 
           git add Packages Packages.gz Packages.bz2 Release
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
+          if git diff --cached --quiet
+          then
+            echo "No changes."
             exit 0
           fi
 
           git commit -m "Auto update Packages and Release"
 
-          git push origin HEAD:main
+          git push
