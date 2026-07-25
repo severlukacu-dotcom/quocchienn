@@ -1,1 +1,62 @@
-# Empty Packages - run build.sh to generate
+Package: com.if-she.cydia.vcam
+Version: 0.0.1-8+debug
+Architecture: iphoneos-arm
+Maintainer: trizau
+Installed-Size: 244
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: .tmp_repo/Virtual-camera.rootful.deb
+Size: 37152
+MD5sum: 8d45fc680e18b50c378883e6e0252a61
+SHA1: 1d02e937eb52791514a46c7436ba2ceef9d3f39e
+SHA256: cd89510cfb5f8a353bd8a8abd54b83df2fdb6cbbe6b8b1ead76d8fab685d4830
+Section: Tweaks
+Description: VCAM4iOS
+Author: trizau
+Name: VCAM4iOS
+
+Package: com.vcamios.vcamiosrootfull
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: Vcam iOS
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: .tmp_repo/vcamiosrootfull.deb
+Size: 62690
+MD5sum: 850836a7b12f8e162798174c958162aa
+SHA1: 7c2c558eb556d7b9e9abaee193b9ec2e87ac9408
+SHA256: d68ae6e6d881bd345f2c3ce295404316c9e4542be9646e2d87555ab9e435c7a2
+Section: Tweaks
+Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -, Volumn + -)
+Author: quocchienn
+Name: VCAM iOS
+
+Package: com.vcamios.vcamiosroothide
+Version: 1.0.2
+Architecture: iphoneos-arm64e
+Maintainer: Vcam iOS
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: .tmp_repo/vcamroothide.deb
+Size: 70028
+MD5sum: 75908b21187a0836a9e7bfc9e4741652
+SHA1: 09b2b5a2b1ee514744fe45d1fc60b4f0ce705141
+SHA256: b109e8646ebd677e4ad395dd78c7a335a3e7364fab4896a0508312f854675b37
+Section: Tweaks
+Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -, Volumn + -)
+Author: quocchienn
+Name: VCAM iOS (Roothide)
+
+Package: com.vcamios.vcamiosrootless
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Maintainer: Vcam iOS
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: .tmp_repo/vcamrootless.deb
+Size: 62632
+MD5sum: d9255a07b7b33fbdcb560b639343b88f
+SHA1: eee25c44cb7b46b8e84eded4f9e2c2327a0fbd04
+SHA256: c14eadf515406e500e3f035edd6c0cce7fee479c79f2d41f2c762ef9fd8f2681
+Section: Tweaks
+Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -, Volumn + -)
+Author: quocchienn
+Name: VCAM iOS Có Tiếng (Rootless)
+

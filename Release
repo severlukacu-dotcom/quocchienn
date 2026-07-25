@@ -1,8 +1,9 @@
-Origin: QC Vcam IOS
-Label: Quoc Chien
+Origin: Sileo Repo
+Label: Sileo
 Suite: stable
 Version: 1.0
-Codename: ios
+Codename: sileo
 Architectures: iphoneos-arm iphoneos-arm64
 Components: main
-Description: quocchienn ios vcam telegram quocchienn
+Description: Modern Sileo Repository
+Date: Sat, 25 Jul 2026 17:39:57 +0000
