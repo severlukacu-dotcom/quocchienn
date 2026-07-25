@@ -4,7 +4,7 @@ Architecture: iphoneos-arm
 Maintainer: trizau
 Installed-Size: 244
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: .tmp_repo/Virtual-camera.rootful.deb
+Filename: debs/Virtual-camera.rootful.deb
 Size: 37152
 MD5sum: 8d45fc680e18b50c378883e6e0252a61
 SHA1: 1d02e937eb52791514a46c7436ba2ceef9d3f39e
@@ -19,7 +19,7 @@ Version: 1.0.2
 Architecture: iphoneos-arm64
 Maintainer: Vcam iOS
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: .tmp_repo/vcamiosrootfull.deb
+Filename: debs/vcamiosrootfull.deb
 Size: 62690
 MD5sum: 850836a7b12f8e162798174c958162aa
 SHA1: 7c2c558eb556d7b9e9abaee193b9ec2e87ac9408
@@ -35,7 +35,7 @@ Architecture: iphoneos-arm64e
 Maintainer: Vcam iOS
 Pre-Depends: rootless-compat(>= 0.9)
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: .tmp_repo/vcamroothide.deb
+Filename: debs/vcamroothide.deb
 Size: 70028
 MD5sum: 75908b21187a0836a9e7bfc9e4741652
 SHA1: 09b2b5a2b1ee514744fe45d1fc60b4f0ce705141
@@ -50,7 +50,7 @@ Version: 1.0.2
 Architecture: iphoneos-arm64
 Maintainer: Vcam iOS
 Depends: mobilesubstrate (>= 0.9.5000)
-Filename: .tmp_repo/vcamrootless.deb
+Filename: debs/vcamrootless.deb
 Size: 62632
 MD5sum: d9255a07b7b33fbdcb560b639343b88f
 SHA1: eee25c44cb7b46b8e84eded4f9e2c2327a0fbd04

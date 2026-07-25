@@ -1,9 +1,9 @@
-Origin: Sileo Repo
-Label: Sileo
+Origin: QuocChien Repo
+Label: QuocChien
 Suite: stable
 Version: 1.0
-Codename: sileo
-Architectures: iphoneos-arm iphoneos-arm64
+Codename: stable
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: Modern Sileo Repository
-Date: Sat, 25 Jul 2026 17:39:57 +0000
+Description: QuocChien Sileo Repository
+Date: Sat, 25 Jul 2026 17:58:08 +0000
