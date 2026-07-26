@@ -25,7 +25,8 @@
     --radius:18px;
     --shadow:0 20px 60px -20px rgba(0,0,0,0.6);
   }
-  html.light{
+  html{ font-size:100%; }
+  html[data-theme="light"]{
     --bg:#EFEFF6;
     --bg-soft:#E5E4F1;
     --glass:rgba(20,18,40,0.045);
@@ -38,6 +39,23 @@
     --mint:#0FA57E;
     --mint-soft:rgba(15,165,126,0.12);
     --shadow:0 20px 50px -24px rgba(30,20,60,0.25);
+  }
+  /* Follows the OS/browser color scheme automatically until the person picks a theme manually (JS then sets data-theme and this stops applying) */
+  @media (prefers-color-scheme: light){
+    html:not([data-theme]){
+      --bg:#EFEFF6;
+      --bg-soft:#E5E4F1;
+      --glass:rgba(20,18,40,0.045);
+      --glass-strong:rgba(20,18,40,0.07);
+      --glass-border:rgba(20,18,40,0.1);
+      --text:#191825;
+      --muted:#5C5A72;
+      --accent:#6845E0;
+      --accent-soft:rgba(104,69,224,0.12);
+      --mint:#0FA57E;
+      --mint-soft:rgba(15,165,126,0.12);
+      --shadow:0 20px 50px -24px rgba(30,20,60,0.25);
+    }
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -53,7 +71,7 @@
     transition:background .4s ease, color .3s ease;
     min-height:100vh;
   }
-  .container{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .container{max-width:min(1080px, 94vw);margin:0 auto;padding:0 clamp(16px, 3vw, 24px);}
   .mono{font-family:'JetBrains Mono', monospace;}
   .display{font-family:'Sora', sans-serif;}
   a{color:inherit;}
@@ -100,8 +118,8 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    padding:72px 0 40px;
-    display:grid; grid-template-columns:1.05fr .95fr; gap:48px; align-items:center;
+    padding:clamp(40px, 8vw, 72px) 0 clamp(24px, 4vw, 40px);
+    display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(24px, 4vw, 48px); align-items:center;
   }
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -170,7 +188,10 @@
     padding:20px 18px; font-size:13px; line-height:1.9; min-height:220px;
     color:#C9C8DA;
   }
-  html.light .terminal-body{color:#3C3A55;}
+  html[data-theme="light"] .terminal-body{color:#3C3A55;}
+  @media (prefers-color-scheme: light){
+    html:not([data-theme]) .terminal-body{color:#3C3A55;}
+  }
   .terminal-body .prompt{color:var(--mint);}
   .terminal-body .path{color:var(--accent);}
   .terminal-body .ok{color:var(--mint);}
@@ -191,7 +212,7 @@
 
   /* ---------- Packages ---------- */
   .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:20px; flex-wrap:wrap;}
-  .section-head h3{font-size:24px; margin:0; font-family:'Sora',sans-serif;}
+  .section-head h3{font-size:clamp(20px, 2.2vw, 24px); margin:0; font-family:'Sora',sans-serif;}
   .section-head p{margin:4px 0 0; color:var(--muted); font-size:14px;}
 
   .toolbar{display:flex; gap:10px; margin-bottom:22px; flex-wrap:wrap;}
@@ -261,7 +282,7 @@
   :focus-visible{outline:2px solid var(--mint); outline-offset:2px;}
 </style>
 </head>
-<body class="dark">
+<body>
 
 <div class="nav-wrap">
   <nav class="pill">
@@ -336,31 +357,36 @@
 </main>
 
 <footer class="container">
-  <p>© 2026 Sileo Repo · được duy trì bởi <a href="https://github.com/severlukacu-dotcom" target="_blank" rel="noopener">@quocchienn</a></p>
+  <p>© 2026 Sileo Repo · được duy trì bởi <a href="https://t.me/QuocChienn" target="_blank" rel="noopener">@quocchienn</a></p>
   <p><a href="sileo://source/https://severlukacu-dotcom.github.io/quocchienn/">Thêm nguồn vào Sileo →</a></p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js"></script>
 <script>
 (function(){
-  // ---------- Theme ----------
+  // ---------- Theme: auto-follow device, manual override wins ----------
   const root = document.documentElement;
-  const body = document.body;
   const toggleBtn = document.getElementById('theme-toggle');
+  const lightQuery = window.matchMedia('(prefers-color-scheme: light)');
+
   function applyTheme(mode){
-    if(mode === 'light'){
-      root.classList.add('light'); body.classList.remove('dark'); body.classList.add('light');
-      toggleBtn.textContent = '☀️';
-    } else {
-      root.classList.remove('light'); body.classList.remove('light'); body.classList.add('dark');
-      toggleBtn.textContent = '🌙';
-    }
+    root.setAttribute('data-theme', mode);
+    toggleBtn.textContent = mode === 'light' ? '☀️' : '🌙';
   }
-  let saved = 'dark';
-  try { saved = localStorage.getItem('sileo-theme') || 'dark'; } catch(e){}
-  applyTheme(saved);
+  function getManualChoice(){
+    try { return localStorage.getItem('sileo-theme'); } catch(e){ return null; }
+  }
+
+  const manual = getManualChoice();
+  applyTheme(manual || (lightQuery.matches ? 'light' : 'dark'));
+
+  // Live-follow the OS/browser theme change, but only while no manual choice has been made
+  lightQuery.addEventListener('change', (e) => {
+    if(!getManualChoice()){ applyTheme(e.matches ? 'light' : 'dark'); }
+  });
+
   toggleBtn.addEventListener('click', () => {
-    const next = root.classList.contains('light') ? 'dark' : 'light';
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     applyTheme(next);
     try { localStorage.setItem('sileo-theme', next); } catch(e){}
   });
