@@ -1,3 +1,23 @@
+Package: applist
+Version: 1.5.14
+Architecture: iphoneos-arm64e
+Maintainer: Ryan Petrich <rpetrich@gmail.com>
+Installed-Size: 600
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 3.0), com.rpetrich.rocketbootstrap (>= 1.0.6~beta) | firmware (<< 7.0)
+Conflicts: com.a3tweaks.polus (<< 2.0.7)
+Filename: debs/applist_1.5.14_iphoneos-arm64e.deb
+Size: 129088
+MD5sum: ce6e43fbb35fc2967d1e5921f7fdc61b
+SHA1: 2fcd55e7c047c867187c98dba6e744f8dc2c86f2
+SHA256: 1314df9089694c3d39b1e2414e42f5c0e06885b8f460456fdf3f6fb98ea4193d
+Section: System
+Description: Allow extensions to read the list of installed apps
+Author: Ryan Petrich <rpetrich@gmail.com>
+Depiction: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=AppListDp
+Dev: rpetrich
+Name: AppList
+Website: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=AppListDp
+
 Package: com.if-she.cydia.vcam
 Version: 0.0.1-8+debug
 Architecture: iphoneos-arm
@@ -13,6 +33,45 @@ Section: Tweaks
 Description: VCAM4iOS
 Author: trizau
 Name: VCAM4iOS
+
+Package: com.kinken.fakepicturecracked
+Version: 1.6.5
+Architecture: iphoneos-arm64e
+Maintainer: kinken
+Installed-Size: 11128
+Depends: firmware (>= 6.0), mobilesubstrate (>= 0.9.5000), applist (>= 1.5.14)
+Filename: debs/net.joebruce.fakepicture_cracked_1.6.5.deb
+Size: 4798520
+MD5sum: ecb7efbbf8735bfc75af66db5f6ca5e8
+SHA1: 23f05edbdd721146b0c1a67f83476836761e7d88
+SHA256: f497bcf595c6e87560784e0e69390865a92e9817bd99ff661a22d2cb52f202dc
+Section: Tweaks
+Description: Fake Picture is used for fake picture taking when Apps ask to take a picture from iPhone camera
+    Fake Picture is used for fake picture taking when Apps ask to take a picture from iPhone camera. So the app will get a replaced image which you set. It's a good way to protect your privacy. 虚拟拍照，能够替换应用请求摄像头拍照的图片，让应用得到任意你设置的照片。它是一个魔法相机，实现模拟照相机功能，从而保护你的个人相片隐私。
+Author: Joe Bruce
+Depiction: https://kkyuen.github.io/repo/depictions/?p=com.kinken.fakepicturecracked
+Name: FakePicture(拍照替换) Cracked
+
+Package: com.rpetrich.rocketbootstrap
+Version: 1.0.9
+Architecture: iphoneos-arm64e
+Maintainer: BigBoss <bigboss@thebigboss.org>
+Installed-Size: 596
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 3.0)
+Filename: debs/com.rpetrich.rocketbootstrap_1.0.9_iphoneos-arm64e.deb
+Size: 49854
+MD5sum: e3ac06b80528c6c8a1fa9900f9159aa9
+SHA1: 92914dad54bceb93d1acb636687b60f9e1d32b16
+SHA256: 4b737a06ebfcd76abfc17161c12b660b050a6bc850a653681205a841d22b0d59
+Section: Tweaks
+Homepage: https://www.rpetrich.com/cydia/rocketbootstrap/beta/
+Description: Support library allowing tweaks to communicate with sandboxed processes
+Tag: purpose::extension, role::developer
+Author: Ryan Petrich <rpetrich+rocketbootstrap@gmail.com>
+Depiction: https://www.rpetrich.com/cydia/rocketbootstrap/beta/
+Dev: rpetrich
+Name: RocketBootstrap
+Sponsor: thebigboss.org <http://thebigboss.org>
 
 Package: com.vcamios.vcamiosrootfull
 Version: 1.0.2
