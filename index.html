@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sileo Repo — Kho gói cho thiết bị jailbreak</title>
 <meta name="description" content="Kho gói APT hiện đại cho Sileo, Zebra và Installer 5.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237C5CFC'/%3E%3Cstop offset='1' stop-color='%2333E6B3'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='%230A0B14'/%3E%3Crect x='30' y='30' width='40' height='40' rx='10' fill='url(%23g)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -115,6 +116,26 @@
     font-size:16px; transition:.2s;
   }
   #theme-toggle:hover{background:var(--glass-strong);}
+  .nav-actions{display:flex; align-items:center; gap:8px;}
+  .nav-wrap.scrolled nav.pill{ box-shadow:0 24px 50px -18px rgba(0,0,0,.55); border-color:rgba(124,92,252,.25); }
+
+  #menu-toggle{
+    display:none; width:38px;height:38px;border-radius:50%;
+    border:1px solid var(--glass-border); background:var(--glass);
+    align-items:center; justify-content:center; font-size:16px;
+  }
+  .mobile-menu{
+    display:none; position:fixed; top:76px; left:16px; right:16px; z-index:49;
+    background:var(--glass-strong); border:1px solid var(--glass-border);
+    border-radius:16px; padding:10px; backdrop-filter:blur(18px) saturate(140%);
+    box-shadow:var(--shadow); flex-direction:column; gap:2px;
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{
+    padding:12px 14px; border-radius:10px; font-size:14.5px; font-weight:500;
+    color:var(--text); text-decoration:none;
+  }
+  .mobile-menu a:hover{background:var(--glass);}
 
   /* ---------- Hero ---------- */
   .hero{
@@ -234,6 +255,22 @@
   }
   .chip.active{background:var(--accent); border-color:var(--accent); color:#fff;}
 
+  .sort-select{
+    background:var(--glass); border:1px solid var(--glass-border); color:var(--text);
+    padding:9px 14px; border-radius:12px; font-size:13px; font-weight:500; cursor:pointer;
+  }
+  .sort-select:focus-visible{outline:2px solid var(--mint);}
+
+  .pkg-compat{display:flex; gap:6px; flex-wrap:wrap;}
+  .compat-badge{
+    font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:999px;
+    background:var(--glass); border:1px solid var(--glass-border); color:var(--muted);
+    white-space:nowrap;
+  }
+  .compat-badge.rootless{color:var(--mint); border-color:rgba(51,230,179,.3); background:var(--mint-soft);}
+  .compat-badge.rootful{color:var(--amber); border-color:rgba(255,184,107,.3); background:rgba(255,184,107,.1);}
+  .compat-badge.roothide{color:var(--accent); border-color:rgba(124,92,252,.3); background:var(--accent-soft);}
+
   .package-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:16px;}
   .pkg-card{
     background:var(--glass); border:1px solid var(--glass-border); border-radius:16px;
@@ -274,12 +311,42 @@
     .stats{grid-template-columns:1fr;}
     nav.pill{border-radius:20px;}
     .nav-links{display:none;}
+    #menu-toggle{display:flex;}
   }
   @media (prefers-reduced-motion: reduce){
     .caret{animation:none;}
     .pkg-card, .btn-primary{transition:none;}
+    .pkg-card{animation:none !important; opacity:1 !important; transform:none !important;}
   }
   :focus-visible{outline:2px solid var(--mint); outline-offset:2px;}
+
+  /* ---------- Card entrance + category chip ---------- */
+  .pkg-card{ opacity:0; transform:translateY(14px); animation:pkgIn .5s ease forwards; }
+  @keyframes pkgIn{ to{ opacity:1; transform:translateY(0); } }
+  .pkg-section-chip{
+    align-self:flex-start; font-size:11px; font-weight:600; padding:3px 9px;
+    border-radius:999px; color:#fff; letter-spacing:.2px;
+  }
+
+  /* ---------- Skeleton loader ---------- */
+  .skeleton-card{
+    background:var(--glass); border:1px solid var(--glass-border); border-radius:16px;
+    padding:18px; display:flex; flex-direction:column; gap:12px; overflow:hidden; position:relative;
+  }
+  .skeleton-line, .skeleton-icon{
+    background:linear-gradient(90deg, var(--glass) 25%, var(--glass-strong) 50%, var(--glass) 75%);
+    background-size:200% 100%; animation:shimmer 1.4s ease-in-out infinite; border-radius:8px;
+  }
+  .skeleton-icon{width:46px; height:46px; border-radius:12px;}
+  .skeleton-line.title{height:14px; width:70%;}
+  .skeleton-line.meta{height:10px; width:50%;}
+  .skeleton-line.desc{height:11px; width:100%;}
+  .skeleton-line.desc.short{width:65%;}
+  @keyframes shimmer{ 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+  @media (prefers-reduced-motion: reduce){ .skeleton-line, .skeleton-icon{animation:none;} }
+
+  /* ---------- Result count ---------- */
+  .result-count{font-size:12.5px; color:var(--muted); margin:-8px 0 16px;}
 </style>
 </head>
 <body>
@@ -292,9 +359,17 @@
       <a href="#source-url-section">Nguồn</a>
       <a href="https://github.com/severlukacu-dotcom/quocchienn" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <button id="theme-toggle" aria-label="Chuyển giao diện sáng / tối">🌙</button>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Chuyển giao diện sáng / tối">🌙</button>
+      <button id="menu-toggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+    </div>
   </nav>
 </div>
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="#packages-list">Gói</a>
+  <a href="#source-url-section">Nguồn</a>
+  <a href="https://github.com/severlukacu-dotcom/quocchienn" target="_blank" rel="noopener">GitHub</a>
+</nav>
 
 <main class="container">
 
@@ -349,8 +424,15 @@
         <input type="text" id="search-input" placeholder="Tìm gói theo tên hoặc mô tả...">
       </div>
       <div class="filters" id="filters"></div>
+      <select id="sort-select" class="sort-select" aria-label="Sắp xếp gói">
+        <option value="default">Mặc định</option>
+        <option value="newest">Mới nhất</option>
+        <option value="name">Tên A-Z</option>
+        <option value="size">Dung lượng</option>
+      </select>
     </div>
 
+    <p class="result-count" id="result-count"></p>
     <div class="package-grid" id="package-grid"></div>
   </section>
 
@@ -390,6 +472,26 @@
     applyTheme(next);
     try { localStorage.setItem('sileo-theme', next); } catch(e){}
   });
+
+  // ---------- Mobile menu ----------
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  }));
+
+  // ---------- Navbar scroll elevation ----------
+  const navWrap = document.querySelector('.nav-wrap');
+  window.addEventListener('scroll', () => {
+    navWrap.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
 
   // ---------- Add source deep link ----------
   const addSourceBtn = document.getElementById('add-source-btn');
@@ -472,9 +574,29 @@
   const statCount = document.getElementById('stat-count');
   const statSections = document.getElementById('stat-sections');
   const statUpdated = document.getElementById('stat-updated');
+  const resultCount = document.getElementById('result-count');
+
+  function renderSkeleton(n){
+    grid.innerHTML = Array.from({length:n}).map(() => `
+      <div class="skeleton-card">
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <div class="skeleton-icon"></div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-line desc"></div>
+        <div class="skeleton-line desc short"></div>
+      </div>
+    `).join('');
+    resultCount.textContent = '';
+  }
 
   let allPackages = [];
   let activeFilter = 'all';
+  let activeSort = 'default';
+  const sortSelect = document.getElementById('sort-select');
   const iconPalette = ['#7C5CFC','#33E6B3','#FFB86B','#22C1DC','#FF6B6B','#9C6BFF','#5A3FE0'];
 
   function colorFor(str){
@@ -504,6 +626,27 @@
     }).filter(f => f.Package);
   }
 
+  function parseCompat(f){
+    const depends = f.Depends || '';
+    const tag = (f.Tag || '').toLowerCase();
+    const haystack = (depends + ' ' + tag).toLowerCase();
+
+    const minMatch = depends.match(/firmware\s*\(>=\s*([\d.]+)\)/i);
+    const maxMatch = depends.match(/firmware\s*\(<=\s*([\d.]+)\)/i);
+    let iosRange = null;
+    if(minMatch && maxMatch) iosRange = `iOS ${minMatch[1]}–${maxMatch[1]}`;
+    else if(minMatch) iosRange = `iOS ${minMatch[1]}+`;
+    else if(maxMatch) iosRange = `iOS ≤ ${maxMatch[1]}`;
+
+    let fsType = null;
+    if(/rootless/.test(haystack)) fsType = 'Rootless';
+    else if(/rootful/.test(haystack)) fsType = 'Rootful';
+
+    const roothide = /roothide/.test(haystack);
+
+    return { iosRange, fsType, roothide };
+  }
+
   function mapToPackage(f){
     const sizeKB = f['Installed-Size'] ? parseInt(f['Installed-Size'], 10) : null;
     const author = (f.Author || f.Maintainer || '').replace(/<[^>]*>/g,'').trim();
@@ -515,8 +658,10 @@
       section: (f.Section || 'Khác').trim(),
       desc: (f.Description || 'Không có mô tả.').split('\n')[0],
       icon: f.Icon || null,
+      sizeKB,
       size: sizeKB ? (sizeKB/1024).toFixed(1) + ' MB' : null,
-      paid: /cydia::commercial/i.test(f.Tag || '')
+      paid: /cydia::commercial/i.test(f.Tag || ''),
+      compat: parseCompat(f)
     };
   }
 
@@ -559,21 +704,53 @@
     });
   }
 
+  function compareVersionsDesc(a, b){
+    const pa = String(a).split(/[.+~-]/).map(x => parseInt(x, 10) || 0);
+    const pb = String(b).split(/[.+~-]/).map(x => parseInt(x, 10) || 0);
+    const len = Math.max(pa.length, pb.length);
+    for(let i=0;i<len;i++){
+      const diff = (pb[i]||0) - (pa[i]||0);
+      if(diff !== 0) return diff;
+    }
+    return 0;
+  }
+
+  function applySort(list){
+    const arr = [...list];
+    if(activeSort === 'newest') arr.sort((a,b) => compareVersionsDesc(a.version, b.version));
+    else if(activeSort === 'name') arr.sort((a,b) => a.name.localeCompare(b.name, 'vi'));
+    else if(activeSort === 'size') arr.sort((a,b) => (a.sizeKB ?? Infinity) - (b.sizeKB ?? Infinity));
+    return arr;
+  }
+
   function renderGrid(){
     const q = searchInput.value.trim().toLowerCase();
-    const filtered = allPackages.filter(p => {
+    let filtered = allPackages.filter(p => {
       const matchesFilter = activeFilter === 'all' || p.section === activeFilter;
       const matchesQuery = !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
       return matchesFilter && matchesQuery;
     });
+    filtered = applySort(filtered);
 
     if(filtered.length === 0){
       grid.innerHTML = '<div class="empty-state">Không tìm thấy gói phù hợp. Thử từ khoá khác.</div>';
+      resultCount.textContent = '0 gói phù hợp';
       return;
     }
 
-    grid.innerHTML = filtered.map(p => `
-      <div class="pkg-card">
+    resultCount.textContent = `${filtered.length} gói phù hợp`;
+
+    grid.innerHTML = filtered.map((p, i) => {
+      const c = p.compat;
+      const compatBadges = [
+        c.iosRange ? `<span class="compat-badge">${c.iosRange}</span>` : '',
+        c.fsType ? `<span class="compat-badge ${c.fsType.toLowerCase()}">${c.fsType}</span>` : '',
+        c.roothide ? `<span class="compat-badge roothide">RootHide</span>` : ''
+      ].join('');
+
+      return `
+      <div class="pkg-card" style="animation-delay:${Math.min(i, 12) * 40}ms">
+        <span class="pkg-section-chip" style="background:${colorFor(p.section)}">${p.section}</span>
         <div class="pkg-top">
           ${p.icon
             ? `<img class="pkg-icon" src="${p.icon}" alt="" loading="lazy" style="object-fit:cover">`
@@ -584,13 +761,15 @@
             <div class="pkg-meta mono">v${p.version}${p.size ? ' · ' + p.size : ''} · ${p.author}</div>
           </div>
         </div>
+        ${compatBadges ? `<div class="pkg-compat">${compatBadges}</div>` : ''}
         <div class="pkg-desc">${p.desc}</div>
         <div class="pkg-footer">
           <span class="pkg-price">${p.paid ? 'Trả phí' : 'Miễn phí'}</span>
           <a class="pkg-get" href="sileo://package/${p.id}">Cài đặt</a>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   function renderEmptyRepoState(){
@@ -602,9 +781,12 @@
     statCount.textContent = '0';
     statSections.textContent = '0';
     statUpdated.textContent = '—';
+    resultCount.textContent = '';
   }
 
   async function init(){
+    renderSkeleton(6);
+
     let text = await fetchText('./Packages');
     if(!text) text = await fetchGzText('./Packages.gz');
 
@@ -631,6 +813,7 @@
   }
 
   searchInput.addEventListener('input', renderGrid);
+  sortSelect.addEventListener('change', () => { activeSort = sortSelect.value; renderGrid(); });
   init();
 })();
 </script>
