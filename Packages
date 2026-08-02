@@ -250,6 +250,54 @@ Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -,
 Author: quocchienn
 Name: VCAM iOS Có Tiếng (Rootless)
 
+Package: moe.waru.jikan
+Version: 1.0.0-rc.4-1+debug
+Architecture: iphoneos-arm64
+Maintainer: waruhachi
+Installed-Size: 928
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/moe.waru.jikan_1.0.0-rc.4_iphoneos-arm64.deb
+Size: 135688
+MD5sum: 9d16bb21343ca8b666b876c650230c54
+SHA1: eb764331d3b265eec15b604c6b407927a6321c9f
+SHA256: bfa8eda4318021219618e1ce11626a2744d5624276c431b4de942b163491cd2b
+Section: Tweaks
+Description: Show time left to full charge on your lock screen
+Author: waruhachi
+Name: Jikan
+
+Package: moe.waru.jikan
+Version: 1.0.0-rc.4-1+debug
+Architecture: iphoneos-arm
+Maintainer: waruhachi
+Installed-Size: 928
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/moe.waru.jikan_1.0.0-rc.4_iphoneos-arm.deb
+Size: 135588
+MD5sum: 2c63150feb8111f62173eaee351323fb
+SHA1: 2b517b7fb60bf61fb35e1d9e54346487db36ee95
+SHA256: d6a692fb6f19979add551076b023de58e9faf16e32af9c91963248510bf23dd6
+Section: Tweaks
+Description: Show time left to full charge on your lock screen
+Author: waruhachi
+Name: Jikan
+
+Package: moe.waru.jikan
+Version: 1.0.0-rc.4-1+debug
+Architecture: iphoneos-arm64e
+Maintainer: waruhachi
+Installed-Size: 908
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: debs/moe.waru.jikan_1.0.0-rc.4_iphoneos-arm64e.deb
+Size: 131760
+MD5sum: 6bd6f20d6a83835dc1d274b8f2488562
+SHA1: 0ef9cabe370e944bc30a28ca937f1f6d729801f0
+SHA256: 24c1b96055c8887e5ee49fd94d5c251567bace240b02ba6202a3b7f58e92c06d
+Section: Tweaks
+Description: Show time left to full charge on your lock screen
+Author: waruhachi
+Name: Jikan
+
 Package: roothide.patches.filza
 Version: 0.5-4
 Architecture: iphoneos-arm64e
