@@ -18,6 +18,60 @@ Dev: rpetrich
 Name: AppList
 Website: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=AppListDp
 
+Package: com.dao.milkywayreborn
+Version: 1.3
+Architecture: iphoneos-arm64e
+Maintainer: MilkyWay Reborn
+Installed-Size: 308
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.milkyway.reborn
+Filename: debs/com.dao.milkywayreborn_1.3_iphoneos-arm64e.deb
+Size: 48898
+MD5sum: 73330624fc81583f94df8b05346e09e6
+SHA1: 3187991f7664f1af244f305c019b497f41f0c512
+SHA256: 8fd6a1d1ee619ecb97c48adb3a1e01b5600cdd1f85f5f0e9773bc6b7d4acd959
+Section: 嗨-系统
+Description: 窗口化多任务，也就是分屏；无设置，后台界面，按住程序卡片2秒，即可将此程序窗口化/分屏；由 akusio 基于 MilkyWay2 现代化重写；34306 优化适用于 iOS17–18 和 26。
+Author: MilkyWay Reborn
+Name: MilkyWayReborn(RootHide)
+Sileodepiction: https://xiangfeidexiaohuo.github.io/sileodepiction/milkyway/js.json
+
+Package: com.dao.milkywayreborn
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: MilkyWay Reborn
+Installed-Size: 308
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.milkyway.reborn
+Filename: debs/com.dao.milkywayreborn_1.3_iphoneos-arm.deb
+Size: 48872
+MD5sum: eb637f705f8f54dfd1c4e82ec030a786
+SHA1: 8cdd774b3b37b66053f8e47a3e4ce2a347526c94
+SHA256: 637d68f3aec92a2f9b1f2e0aa0dd9e9fcd0a1ebb8cbf83af610efcd580f49512
+Section: 嗨-系统
+Description: 窗口化多任务，也就是分屏；无设置，后台界面，按住程序卡片2秒，即可将此程序窗口化/分屏；由 akusio 基于 MilkyWay2 现代化重写；34306 优化适用于 iOS17–18 和 26。
+Author: MilkyWay Reborn
+Name: MilkyWayReborn
+Sileodepiction: https://xiangfeidexiaohuo.github.io/sileodepiction/milkyway/js.json
+
+Package: com.dao.milkywayreborn
+Version: 1.3
+Architecture: iphoneos-arm64
+Maintainer: MilkyWay Reborn
+Installed-Size: 308
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: com.milkyway.reborn
+Filename: debs/com.dao.milkywayreborn_1.3_iphoneos-arm64.deb
+Size: 48960
+MD5sum: 225425cd2a55d46fb52ecab435cc4230
+SHA1: a5b418dbb734b8ee31dec946c01b850b93976970
+SHA256: 1c727585d217af5a107e1e902886d76e443cb629bd34c86247c472d686e5ee35
+Section: 嗨-系统
+Description: 窗口化多任务，也就是分屏；无设置，后台界面，按住程序卡片2秒，即可将此程序窗口化/分屏；由 akusio 基于 MilkyWay2 现代化重写；34306 优化适用于 iOS17–18 和 26。
+Author: MilkyWay Reborn
+Name: MilkyWayReborn(rootless)
+Sileodepiction: https://xiangfeidexiaohuo.github.io/sileodepiction/milkyway/js.json
+
 Package: com.ethxnn88.visibleisland
 Version: 2.0
 Architecture: iphoneos-arm64
