@@ -8,6 +8,22 @@
     "url": "ipa/ChatGPT_1.2024.200.ipa"
   },
   {
+    "name": "Dopamine",
+    "bundleId": "com.opa334.Dopamine-roothide",
+    "version": "2.4.9.25",
+    "size": "52.3 MB",
+    "icon": "icons/com.opa334.Dopamine-roothide.png",
+    "url": "ipa/Dopamine.ipa"
+  },
+  {
+    "name": "PostBox",
+    "bundleId": "com.simplycode.PostBox",
+    "version": "0.8.1",
+    "size": "8.1 MB",
+    "icon": "icons/com.simplycode.PostBox.png",
+    "url": "ipa/PostBox-0.8.1-beta.ipa"
+  },
+  {
     "name": "SpamSMS",
     "bundleId": "ctdotech.xcodeapptesst",
     "version": "0.2",
