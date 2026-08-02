@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ChatGPT",
+    "bundleId": "com.openai.chat",
+    "version": "1.2024.200",
+    "size": "30.3 MB",
+    "icon": "icons/com.openai.chat.png",
+    "url": "ipa/ChatGPT_1.2024.200.ipa"
+  }
+]
