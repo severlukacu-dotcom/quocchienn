@@ -148,6 +148,24 @@ Author: Joe Bruce
 Depiction: https://kkyuen.github.io/repo/depictions/?p=com.kinken.fakepicturecracked
 Name: FakePicture(拍照替换) Cracked
 
+Package: com.nightwind.rootless-patcher
+Version: 0.0.1-38+debug
+Architecture: iphoneos-arm64e
+Maintainer: Nightwind
+Installed-Size: 168
+Depends: odcctools, ldid
+Filename: debs/com.nightwind.rootless-patcher_0.0.1-38+debug_iphoneos-arm64e.deb
+Size: 34208
+MD5sum: 4f9a83453faf0c24d0279de8e2654b93
+SHA1: 79c9c763c0a2d65aec6eab4262ad518cec624f2f
+SHA256: 2ba340a0659f8b1c15b8ec9a659a33b692e39b605cc50e7f0492a5d0ce4a7794
+Section: System
+Description: A CLI rootful to rootless patcher.
+ Utilizes a technique that does not require Xina-style symlinks.
+Tag: role::hacker
+Author: Nightwind and staturnz
+Name: rootless-patcher
+
 Package: com.rpetrich.rocketbootstrap
 Version: 1.0.9
 Architecture: iphoneos-arm64e
@@ -168,6 +186,23 @@ Depiction: https://www.rpetrich.com/cydia/rocketbootstrap/beta/
 Dev: rpetrich
 Name: RocketBootstrap
 Sponsor: thebigboss.org <http://thebigboss.org>
+
+Package: com.tigisoftware.filza64bit
+Version: 4.0.1-4~roothide
+Architecture: iphoneos-arm64e
+Maintainer: TIGI Software
+Pre-Depends: patches-com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Recommends: zip, unzip, gzip, p7zip, unrar, xz-utils
+Conflicts: com.tigisoftware.filza, com.tigisoftware.filza39
+Filename: debs/com.tigisoftware.filza64bit_4.0.1-4_iphoneos-arm64e.deb
+Size: 6972652
+MD5sum: 6391c39283f2cc45dcecf101228d4e28
+SHA1: 718d5c9bb34d0c749ca311e4917736804fe217ec
+SHA256: 35be3aa392b06cd7ed53dd3aa05bf5c3ddaa126ee692b33fba67321fc6cec28d
+Section: Utilities
+Description: File Manager for iPhone, iPad, iPod Touch. Supports iOS 11+. This version only supports 64-bit devices
+Author: TIGI Software
+Name: Filza File Manager 64-bit
 
 Package: com.vcamios.vcamiosrootfull
 Version: 1.0.2
@@ -214,4 +249,71 @@ Section: Tweaks
 Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -, Volumn + -)
 Author: quocchienn
 Name: VCAM iOS Có Tiếng (Rootless)
+
+Package: roothide.patches.filza
+Version: 0.5-4
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 268
+Depends: com.roothide.patchloader
+Recommends: com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Conflicts: com.tigisoftware.filza64bit(>> 4.0.1-4~roothide), com.tigisoftware.filza64bit(<< 4.0.1-4~roothide)
+Provides: patches-com.tigisoftware.filza64bit(= 4.0.1-4~roothide)
+Filename: debs/roothide.patches.filza_0.5-4_iphoneos-arm64e.deb
+Size: 32594
+MD5sum: c225dbb9660a7922190dd6218c77d542
+SHA1: 6f7f5c42f685c7566fb6da5c2a13f494c039c0f9
+SHA256: f1e84b534cf2c085d231779f7177065affc7e0cb0ab92998836797f378448249
+Section: RootHide Patches
+Description: RootHide Dynamic Patches For Filza
+Author: roothide
+Name: Patches for Filza 64bit
+
+Package: rootless-compat
+Version: 1.9
+Architecture: iphoneos-arm64e
+Maintainer: roothide
+Installed-Size: 284
+Depends: com.roothide.patchloader(>= 0.0.4)
+Filename: debs/rootless-compat_1.9_iphoneos-arm64e.deb
+Size: 39662
+MD5sum: 48fcff78af4233e2a87ca47e69a033b6
+SHA1: cefea2f9ae4942c5e70412cb329876aee3f4c176
+SHA256: 365a29692f4dcde0666ac774015adf177c9b9b5bfa60d7a43971a93515289eab
+Section: RootHide Patches
+Description: Compat Layer for Rootless Tweaks
+Author: roothide
+Name: rootless-compat
+
+Package: rootless-v1-test
+Version: 0.0.1-1+debug
+Architecture: iphoneos-arm64
+Maintainer: roothide
+Installed-Size: 196
+Filename: debs/rootless-v1-test_0.0.1-1+debug_iphoneos-arm64.deb
+Size: 4206
+MD5sum: 471a4b9f446ded2bed3ba72c330e4bd1
+SHA1: 743405011b74442866ae36b7affc1fab6b87f862
+SHA256: 614dedfa5b13f083d993fc5c975dd06ca36d54b1e345107a3bf72fb75b7a6a01
+Section: System
+Description: An awesome tool of some sort!!
+Tag: role::hacker
+Author: roothide
+Name: rootless v1 test package
+
+Package: rootless-v2-test
+Version: 0.0.1-2+debug
+Architecture: iphoneos-arm64
+Maintainer: roothide
+Installed-Size: 196
+Filename: debs/rootless-v2-test_0.0.1-2+debug_iphoneos-arm64.deb
+Size: 4212
+MD5sum: 6de296287b1e04c74e975e1096bf2f4c
+SHA1: 8df47c9fa55d87d6027d82415ff25127df6ca928
+SHA256: 14fdb1e656b4449680deb77d9f91b6667250b2f895dbf7db28987dfcfa1435a8
+Section: System
+Description: An awesome tool of some sort!!
+Tag: role::hacker, supports::roothide
+Author: roothide
+Name: rootless v2 test package
 
