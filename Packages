@@ -320,6 +320,23 @@ Description: VCAM- Cách dùng:Nhấn nhanh cộng trừ (nút âm lượng + -,
 Author: quocchienn
 Name: VCAM iOS Có Tiếng (Rootless)
 
+Package: dylv.liquidass
+Version: 0.0.9a
+Architecture: iphoneos-arm64e
+Maintainer: dylv
+Installed-Size: 4176
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 14.0), preferenceloader
+Filename: debs/dylv.liquidass_0.0.9a_iphoneos-arm64e_VietHoa.deb
+Size: 1429388
+MD5sum: 73ce7c620cf8074fabcbb1835493af91
+SHA1: 003e2339ab12ba29c41df9db1707b7dabed92c17
+SHA256: 548a7294b80645b34398293bf4f576920b7331c323da6b125017cfcfb61b033f
+Section: Tweaks
+Description: Việt hoá giao diện Liquid (Gl)ass và các tùy chọn tinh chỉnh kính cho iOS.
+Author: dylv
+Icon: https://winaviation.github.io/repo/depictions/dylv.liquidass/icon.png
+Name: Liquid (Gl)ass
+
 Package: moe.waru.jikan
 Version: 1.0.0-rc.4-1+debug
 Architecture: iphoneos-arm64
