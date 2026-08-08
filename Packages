@@ -148,23 +148,6 @@ Author: Joe Bruce
 Depiction: https://kkyuen.github.io/repo/depictions/?p=com.kinken.fakepicturecracked
 Name: FakePicture(拍照替换) Cracked
 
-Package: com.lumid.opaboutphone
-Version: 1.2.0
-Architecture: iphoneos-arm64e
-Maintainer: Lumid
-Installed-Size: 556
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
-Filename: debs/com.lumid.opaboutphone_1.2.0_iphoneos-arm64e.deb
-Size: 124736
-MD5sum: b7093629a306e6720023986223e6ea0c
-SHA1: 40b00ebe29062b963e64356c9ee94f454c5bca05
-SHA256: e41ca3417863653606468cd5fdaaa3c2ce00f1ff86ba84dd8e51c887d203eb82
-Section: Tweaks
-Description: Trang Gioi thieu thiet bi cho iOS theo phong cach OxygenOS/ColorOS.
-Author: Lumid
-Icon: file:///var/jb/Library/PreferenceBundles/OPAboutPhonePrefs.bundle/icon-large.png
-Name: OP About Phone
-
 Package: com.nightwind.rootless-patcher
 Version: 0.0.1-38+debug
 Architecture: iphoneos-arm64e
