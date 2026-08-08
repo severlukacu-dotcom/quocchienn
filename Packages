@@ -148,6 +148,57 @@ Author: Joe Bruce
 Depiction: https://kkyuen.github.io/repo/depictions/?p=com.kinken.fakepicturecracked
 Name: FakePicture(拍照替换) Cracked
 
+Package: com.lumid.opaboutphone
+Version: 1.2.0
+Architecture: iphoneos-arm64e
+Maintainer: Lumid
+Installed-Size: 556
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
+Filename: debs/com.lumid.opaboutphone_1.2.0_iphoneos-arm64e_rootless_VietHoa.deb
+Size: 124968
+MD5sum: 7d509f7738b18fde380e59a4daf6401a
+SHA1: d24e209b33422482b40fb480994aa76f8f1b13f1
+SHA256: 339e32be9ff6db079414766b499768da305ed534658753cc596ab149f4ab8fb4
+Section: Tweaks
+Description: Trang Giới thiệu thiết bị cho ứng dụng Cài đặt iOS, được thiết kế theo phong cách OxygenOS/ColorOS. Được Việt Hoá.
+Author: Lumid
+Icon: file:///var/jb/Library/PreferenceBundles/OPAboutPhonePrefs.bundle/icon-large.png
+Name: OP About Phone
+
+Package: com.lumid.opaboutphone
+Version: 1.2.0
+Architecture: iphoneos-arm64e
+Maintainer: Lumid
+Installed-Size: 556
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
+Filename: debs/com.lumid.opaboutphone_1.2.0_iphoneos-arm64e_VietHoa.deb
+Size: 124988
+MD5sum: 9cbeadaa0cfaa510368dfbc71c9a2499
+SHA1: b23274db9dfd4d209c68f6f5781b65f92bd812b6
+SHA256: f086d6ab43333bc50feda4d4f4c04e0645898a38b069fbe0f69e6c090a3a80ba
+Section: Tweaks
+Description: Trang Giới thiệu thiết bị cho ứng dụng Cài đặt iOS, được thiết kế theo phong cách OxygenOS/ColorOS. Được Việt Hoá.
+Author: Lumid
+Icon: file:///var/jb/Library/PreferenceBundles/OPAboutPhonePrefs.bundle/icon-large.png
+Name: OP About Phone
+
+Package: com.lumid.opaboutphone
+Version: 1.2.0
+Architecture: iphoneos-arm64e
+Maintainer: Lumid
+Installed-Size: 556
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, firmware (>= 15.0)
+Filename: debs/com.lumid.opaboutphone_1.2.0_iphoneos-arm64e_rootful_VietHoa.deb
+Size: 124792
+MD5sum: d488ddab88f76471660da2cd4a28a16b
+SHA1: 2b3a74be354a64ac58e64e10327bb9fa59372954
+SHA256: e3a8dc7423db36ac5074e96f5a1954c08b090dafadc0809fb15b6c85897841b7
+Section: Tweaks
+Description: Trang Giới thiệu thiết bị cho ứng dụng Cài đặt iOS, được thiết kế theo phong cách OxygenOS/ColorOS. Được Việt Hoá.
+Author: Lumid
+Icon: file:///var/jb/Library/PreferenceBundles/OPAboutPhonePrefs.bundle/icon-large.png
+Name: OP About Phone
+
 Package: com.nightwind.rootless-patcher
 Version: 0.0.1-38+debug
 Architecture: iphoneos-arm64e
