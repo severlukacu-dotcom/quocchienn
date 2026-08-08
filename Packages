@@ -114,6 +114,25 @@ Name: VisibleIsland (roothide)
 Sileodepiction: https://ethxnn88.github.io/repo/depiction/native/com.ethxnn88.visibleisland-arm64e.json
 Tags: compatible_min::ios16.0, compatible_max::ios16.6.1
 
+Package: com.futur3sn0w.ccaster
+Version: 0.2.2
+Architecture: iphoneos-arm64e
+Maintainer: futur3sn0w
+Installed-Size: 1616
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 16.0), firmware (<< 17.0), ellekit, preferenceloader
+Filename: debs/com.futur3sn0w.ccaster_0.2.2_iphoneos-arm64e.deb
+Size: 584864
+MD5sum: cfcb0e742aa121fe743ce27bd989af20
+SHA1: dfc0bb9218277cf4d0f0b446b4e158257cde4082
+SHA256: 0bc273216942a7cba108dda76902e744d9548fbb071e37c0c1bf9fe69e049d06
+Section: Tweaks
+Description: An iOS 18-inspired, editable Control Center experience for iOS 16.
+Author: futur3sn0w
+Icon: https://futur3sn0w.github.io/repo/icons/com.futur3sn0w.ccaster.png
+Name: CCAster
+Sileodepiction: https://futur3sn0w.github.io/repo/depictions/com.futur3sn0w.ccaster.json
+
 Package: com.if-she.cydia.vcam
 Version: 0.0.1-8+debug
 Architecture: iphoneos-arm
