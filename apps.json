@@ -8,12 +8,44 @@
     "url": "ipa/ChatGPT_1.2024.200.ipa"
   },
   {
+    "name": "CheckURL",
+    "bundleId": "CheckURL.Sniper",
+    "version": "1.0",
+    "size": "3.7 MB",
+    "icon": "icons/CheckURL.Sniper.png",
+    "url": "ipa/CheckURL_1.0.ipa"
+  },
+  {
     "name": "Dopamine",
     "bundleId": "com.opa334.Dopamine-roothide",
     "version": "2.4.9.25",
     "size": "52.3 MB",
     "icon": "icons/com.opa334.Dopamine-roothide.png",
     "url": "ipa/Dopamine.ipa"
+  },
+  {
+    "name": "Facebook Lite",
+    "bundleId": "com.quocchien.facebooklite.co",
+    "version": "1.0",
+    "size": "1.6 MB",
+    "icon": "icons/com.quocchien.facebooklite.co.png",
+    "url": "ipa/Facebook Lite.ipa"
+  },
+  {
+    "name": "Filza",
+    "bundleId": "com.tigisoftware.Filza",
+    "version": "4.0",
+    "size": "13.6 MB",
+    "icon": "icons/com.tigisoftware.Filza.png",
+    "url": "ipa/Filza.ipa"
+  },
+  {
+    "name": "Filza",
+    "bundleId": "com.tigisoftware.Filza",
+    "version": "4.0",
+    "size": "13.4 MB",
+    "icon": "icons/com.tigisoftware.Filza.png",
+    "url": "ipa/FilzaJailed.ipa"
   },
   {
     "name": "PostBox",
