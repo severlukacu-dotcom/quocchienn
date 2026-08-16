@@ -48,6 +48,14 @@
     "url": "ipa/FilzaJailed.ipa"
   },
   {
+    "name": "Locus",
+    "bundleId": "com.chrismack.locus",
+    "version": "1.0.2",
+    "size": "4.6 MB",
+    "icon": "icons/com.chrismack.locus.png",
+    "url": "ipa/Locus.ipa"
+  },
+  {
     "name": "PostBox",
     "bundleId": "com.simplycode.PostBox",
     "version": "0.8.1",
