@@ -5,7 +5,8 @@
     "version": "1.2024.200",
     "size": "30.3 MB",
     "icon": "icons/com.openai.chat.png",
-    "url": "ipa/ChatGPT_1.2024.200.ipa"
+    "url": "ipa/ChatGPT_1.2024.200.ipa",
+    "description": "Ứng dụng trợ lý AI ChatGPT."
   },
   {
     "name": "CheckURL",
@@ -13,7 +14,8 @@
     "version": "1.0",
     "size": "3.7 MB",
     "icon": "icons/CheckURL.Sniper.png",
-    "url": "ipa/CheckURL_1.0.ipa"
+    "url": "ipa/CheckURL_1.0.ipa",
+    "description": "Công cụ kiểm tra và phân tích liên kết URL."
   },
   {
     "name": "Dopamine",
@@ -21,7 +23,8 @@
     "version": "2.4.9.25",
     "size": "52.3 MB",
     "icon": "icons/com.opa334.Dopamine-roothide.png",
-    "url": "ipa/Dopamine.ipa"
+    "url": "ipa/Dopamine.ipa",
+    "description": "Công cụ jailbreak cho thiết bị iOS tương thích."
   },
   {
     "name": "Facebook Lite",
@@ -29,7 +32,8 @@
     "version": "1.0",
     "size": "1.6 MB",
     "icon": "icons/com.quocchien.facebooklite.co.png",
-    "url": "ipa/Facebook Lite.ipa"
+    "url": "ipa/Facebook Lite.ipa",
+    "description": "Phiên bản Facebook Lite được tối ưu với dung lượng nhỏ gọn."
   },
   {
     "name": "Filza",
@@ -37,7 +41,8 @@
     "version": "4.0",
     "size": "13.6 MB",
     "icon": "icons/com.tigisoftware.Filza.png",
-    "url": "ipa/Filza.ipa"
+    "url": "ipa/Filza.ipa",
+    "description": "Trình quản lý tệp mạnh mẽ dành cho iOS."
   },
   {
     "name": "Filza",
@@ -45,7 +50,8 @@
     "version": "4.0",
     "size": "13.4 MB",
     "icon": "icons/com.tigisoftware.Filza.png",
-    "url": "ipa/FilzaJailed.ipa"
+    "url": "ipa/FilzaJailed.ipa",
+    "description": "Phiên bản Filza dành cho môi trường jailed, hỗ trợ quản lý tệp trên iOS."
   },
   {
     "name": "Locus",
@@ -53,7 +59,8 @@
     "version": "1.0.2",
     "size": "4.6 MB",
     "icon": "icons/com.chrismack.locus.png",
-    "url": "ipa/Locus.ipa"
+    "url": "ipa/Locus.ipa",
+    "description": "Ứng dụng mô phỏng vị trí GPS với bản đồ, ghim vị trí và điều khiển di chuyển."
   },
   {
     "name": "PostBox",
@@ -61,7 +68,8 @@
     "version": "0.8.1",
     "size": "8.1 MB",
     "icon": "icons/com.simplycode.PostBox.png",
-    "url": "ipa/PostBox-0.8.1-beta.ipa"
+    "url": "ipa/PostBox-0.8.1-beta.ipa",
+    "description": "Công cụ hỗ trợ quản lý và xử lý nội dung trên thiết bị iOS."
   },
   {
     "name": "SpamSMS",
@@ -69,6 +77,7 @@
     "version": "0.2",
     "size": "4.8 MB",
     "icon": "icons/ctdotech.xcodeapptesst.png",
-    "url": "ipa/SpamSMSVip.ipa"
+    "url": "ipa/SpamSMSVip.ipa",
+    "description": "Công cụ hỗ trợ kiểm tra và xử lý tin nhắn SMS."
   }
 ]
