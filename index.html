@@ -83,6 +83,7 @@
         <p>Chọn gói để cài trực tiếp qua Sileo.</p>
       </div>
     </div>
+
     <div class="toolbar">
       <div class="search-box">
         <span aria-hidden="true">🔍</span>
@@ -119,22 +120,6 @@
 
     <p class="result-count" id="app-result-count"></p>
     <div class="package-grid" id="app-grid"></div>
-
-    <details class="schema-help">
-      <summary>Định dạng <code class="mono">apps.json</code></summary>
-      <p>Mỗi app trong mảng JSON gồm các field sau:</p>
-      <pre class="mono schema-block">{
-  "name": "Tên app",
-  "bundleId": "com.example.app",
-  "version": "1.0.0",
-  "size": "45.0 MB",
-  "category": "Tiện ích",
-  "description": "Mô tả ngắn về chức năng của app.",
-  "icon": "icons/com.example.app.png",
-  "url": "ipa/App.ipa"
-}</pre>
-      <p><code class="mono">category</code> và <code class="mono">description</code> là 2 field mới — dùng để nhóm app theo danh mục (hiện thành chip lọc phía trên) và hiển thị mô tả ngắn trên từng thẻ. <code class="mono">generate_apps_json.py</code> tự điền sẵn 2 field này rỗng vì IPA không chứa sẵn thông tin đó — bạn cần tự điền tay sau khi script chạy xong.</p>
-    </details>
   </section>
 
   <section class="packages" id="files-list">
@@ -155,20 +140,6 @@
 
     <p class="result-count" id="file-result-count"></p>
     <div class="package-grid" id="file-grid"></div>
-
-    <details class="schema-help">
-      <summary>Định dạng <code class="mono">files.json</code></summary>
-      <p>Mỗi tệp trong mảng JSON gồm các field sau:</p>
-      <pre class="mono schema-block">{
-  "name": "Tên tệp hiển thị",
-  "extension": "mobileconfig",
-  "type": "Cấu hình",
-  "size": "4 KB",
-  "description": "Mô tả dùng để làm gì, khi nào cần dùng.",
-  "url": "files/example.mobileconfig"
-}</pre>
-      <p><code class="mono">type</code> dùng để nhóm thành chip lọc phía trên (VD: Cấu hình, Chứng chỉ, Plist, Nén...). <code class="mono">extension</code> hiện thành badge màu trên góc thẻ thay cho icon app. Không có script tự sinh cho mục này — bạn tự viết tay <code class="mono">files.json</code> vì đây là file linh tinh, không có metadata chuẩn để đọc tự động như IPA/deb.</p>
-    </details>
   </section>
 
 </main>
