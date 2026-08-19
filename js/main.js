@@ -373,7 +373,9 @@
   const appGrid = document.getElementById('app-grid');
   const appSearchInput = document.getElementById('app-search-input');
   const appResultCount = document.getElementById('app-result-count');
+  const appFiltersEl = document.getElementById('app-filters');
   let allApps = [];
+  let activeAppFilter = 'all';
 
   function renderAppSkeleton(n){
     appGrid.innerHTML = Array.from({length:n}).map(() => `
@@ -394,14 +396,35 @@
     appGrid.innerHTML = `
       <div class="empty-state">
         Chưa tìm thấy file <code class="mono">apps.json</code> ở gốc repo.<br>
-        Tạo file này với định dạng mảng JSON, mỗi app gồm <code class="mono">name, bundleId, version, size, icon, url</code>.
+        Tạo file này với định dạng mảng JSON, mỗi app gồm <code class="mono">name, bundleId, version, size, category, description, icon, url</code>.
       </div>`;
     appResultCount.textContent = '';
   }
 
+  function renderAppFilters(){
+    const categories = allApps.map(a => (a.category || 'Khác').trim());
+    const unique = ['all', ...Array.from(new Set(categories))];
+    appFiltersEl.innerHTML = unique.map(c => `
+      <button class="chip${c === 'all' ? ' active' : ''}" data-filter="${c}">${c === 'all' ? 'Tất cả' : c}</button>
+    `).join('');
+    appFiltersEl.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        appFiltersEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeAppFilter = chip.dataset.filter;
+        renderAppGrid();
+      });
+    });
+  }
+
   function renderAppGrid(){
     const q = appSearchInput.value.trim().toLowerCase();
-    const filtered = allApps.filter(a => !q || a.name.toLowerCase().includes(q));
+    const filtered = allApps.filter(a => {
+      const cat = (a.category || 'Khác').trim();
+      const matchesFilter = activeAppFilter === 'all' || cat === activeAppFilter;
+      const matchesQuery = !q || a.name.toLowerCase().includes(q) || (a.description || '').toLowerCase().includes(q);
+      return matchesFilter && matchesQuery;
+    });
 
     if(filtered.length === 0){
       appGrid.innerHTML = '<div class="empty-state">Không tìm thấy app phù hợp.</div>';
@@ -411,8 +434,11 @@
 
     appResultCount.textContent = `${filtered.length} app`;
 
-    appGrid.innerHTML = filtered.map((a, i) => `
+    appGrid.innerHTML = filtered.map((a, i) => {
+      const cat = (a.category || 'Khác').trim();
+      return `
       <div class="pkg-card" style="animation-delay:${Math.min(i, 12) * 40}ms">
+        <span class="pkg-section-chip" style="background:${colorFor(cat)}">${cat}</span>
         <div class="pkg-top">
           ${a.icon
             ? `<img class="pkg-icon" src="${a.icon}" alt="" loading="lazy" style="object-fit:cover">`
@@ -423,13 +449,15 @@
             <div class="pkg-meta mono">v${a.version || '—'}${a.size ? ' · ' + a.size : ''}</div>
           </div>
         </div>
-        <div class="pkg-desc mono" style="font-size:12px;">${a.bundleId || ''}</div>
+        ${a.description ? `<div class="pkg-desc">${a.description}</div>` : ''}
+        <div class="pkg-desc mono" style="font-size:11px; opacity:.7;">${a.bundleId || ''}</div>
         <div class="pkg-footer">
           <a class="pkg-get" href="${a.url}">Tải .ipa</a>
           <a class="pkg-get" style="background:var(--accent); color:#fff;" href="altstore://install?url=${encodeURIComponent(a.url)}">Mở bằng AltStore</a>
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   }
 
   async function initApps(){
@@ -440,9 +468,113 @@
       allApps = JSON.parse(text);
       if(!Array.isArray(allApps) || allApps.length === 0){ renderAppEmptyState(); return; }
     } catch(e){ renderAppEmptyState(); return; }
+    renderAppFilters();
     renderAppGrid();
   }
 
   appSearchInput.addEventListener('input', renderAppGrid);
   initApps();
+
+  // ---------- Files (misc downloadable files) section ----------
+  const fileGrid = document.getElementById('file-grid');
+  const fileSearchInput = document.getElementById('file-search-input');
+  const fileResultCount = document.getElementById('file-result-count');
+  const fileFiltersEl = document.getElementById('file-filters');
+  let allFiles = [];
+  let activeFileFilter = 'all';
+
+  function renderFileSkeleton(n){
+    fileGrid.innerHTML = Array.from({length:n}).map(() => `
+      <div class="skeleton-card">
+        <div style="display:flex; gap:12px; align-items:flex-start;">
+          <div class="skeleton-icon"></div>
+          <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-line desc"></div>
+      </div>
+    `).join('');
+  }
+
+  function renderFileEmptyState(){
+    fileGrid.innerHTML = `
+      <div class="empty-state">
+        Chưa tìm thấy file <code class="mono">files.json</code> ở gốc repo.<br>
+        Tạo file này với định dạng mảng JSON, mỗi tệp gồm <code class="mono">name, extension, type, size, description, url</code>.
+      </div>`;
+    fileResultCount.textContent = '';
+  }
+
+  function renderFileFilters(){
+    const types = allFiles.map(f => (f.type || 'Khác').trim());
+    const unique = ['all', ...Array.from(new Set(types))];
+    fileFiltersEl.innerHTML = unique.map(t => `
+      <button class="chip${t === 'all' ? ' active' : ''}" data-filter="${t}">${t === 'all' ? 'Tất cả' : t}</button>
+    `).join('');
+    fileFiltersEl.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        fileFiltersEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        activeFileFilter = chip.dataset.filter;
+        renderFileGrid();
+      });
+    });
+  }
+
+  function renderFileGrid(){
+    const q = fileSearchInput.value.trim().toLowerCase();
+    const filtered = allFiles.filter(f => {
+      const type = (f.type || 'Khác').trim();
+      const matchesFilter = activeFileFilter === 'all' || type === activeFileFilter;
+      const matchesQuery = !q || f.name.toLowerCase().includes(q) || (f.description || '').toLowerCase().includes(q);
+      return matchesFilter && matchesQuery;
+    });
+
+    if(filtered.length === 0){
+      fileGrid.innerHTML = '<div class="empty-state">Không tìm thấy tệp phù hợp.</div>';
+      fileResultCount.textContent = allFiles.length ? '0 tệp phù hợp' : '';
+      return;
+    }
+
+    fileResultCount.textContent = `${filtered.length} tệp`;
+
+    fileGrid.innerHTML = filtered.map((f, i) => {
+      const type = (f.type || 'Khác').trim();
+      const ext = (f.extension || f.name.split('.').pop() || '?').slice(0, 5);
+      return `
+      <div class="pkg-card" style="animation-delay:${Math.min(i, 12) * 40}ms">
+        <span class="pkg-section-chip" style="background:${colorFor(type)}">${type}</span>
+        <div class="pkg-top">
+          <div class="file-badge" style="background:${colorFor(ext)}">.${ext}</div>
+          <div>
+            <div class="pkg-name">${f.name}</div>
+            <div class="pkg-meta mono">${f.size || '—'}</div>
+          </div>
+        </div>
+        ${f.description ? `<div class="pkg-desc">${f.description}</div>` : ''}
+        <div class="pkg-footer">
+          <span class="pkg-price"></span>
+          <a class="pkg-get" href="${f.url}" download>Tải xuống</a>
+        </div>
+      </div>
+    `;
+    }).join('');
+  }
+
+  async function initFiles(){
+    renderFileSkeleton(4);
+    const text = await fetchText('./files.json');
+    if(!text){ renderFileEmptyState(); return; }
+    try{
+      allFiles = JSON.parse(text);
+      if(!Array.isArray(allFiles) || allFiles.length === 0){ renderFileEmptyState(); return; }
+    } catch(e){ renderFileEmptyState(); return; }
+    renderFileFilters();
+    renderFileGrid();
+  }
+
+  fileSearchInput.addEventListener('input', renderFileGrid);
+  initFiles();
 })();

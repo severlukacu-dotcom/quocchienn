@@ -1,4 +1,4 @@
-:root{
+  :root{
     --bg:#0A0B14;
     --bg-soft:#10111E;
     --glass:rgba(255,255,255,0.045);
@@ -287,6 +287,27 @@
     border:1px dashed var(--glass-border); border-radius:16px;
   }
 
+  .schema-help{
+    margin-top:22px; border:1px solid var(--glass-border); border-radius:14px;
+    padding:14px 18px; background:var(--glass);
+  }
+  .schema-help summary{
+    cursor:pointer; font-size:13.5px; font-weight:600; color:var(--text);
+    list-style:none; display:flex; align-items:center; gap:6px;
+  }
+  .schema-help summary::before{ content:"▸"; color:var(--muted); transition:transform .2s; }
+  .schema-help[open] summary::before{ transform:rotate(90deg); }
+  .schema-help summary::-webkit-details-marker{ display:none; }
+  .schema-help p{ font-size:13px; color:var(--muted); line-height:1.6; }
+  .schema-block{
+    background:var(--bg-soft); border:1px solid var(--glass-border); border-radius:10px;
+    padding:14px 16px; font-size:12px; line-height:1.7; overflow-x:auto; color:#C9C8DA;
+  }
+  html[data-theme="light"] .schema-block{ color:#3C3A55; }
+  @media (prefers-color-scheme: light){
+    html:not([data-theme]) .schema-block{ color:#3C3A55; }
+  }
+
   footer{
     margin-top:70px; padding:30px 0 50px; border-top:1px solid var(--glass-border);
     color:var(--muted); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
@@ -335,3 +356,11 @@
 
   /* ---------- Result count ---------- */
   .result-count{font-size:12.5px; color:var(--muted); margin:-8px 0 16px;}
+
+  /* ---------- File type badge (Files section) ---------- */
+  .file-badge{
+    width:46px; height:46px; border-radius:12px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:10.5px; color:#fff; letter-spacing:.3px;
+    text-transform:uppercase; text-align:center; padding:2px;
+  }

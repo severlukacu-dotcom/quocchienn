@@ -19,8 +19,9 @@
     <div class="nav-links">
       <a href="#packages-list">Gói</a>
       <a href="#apps-list">Ứng dụng</a>
+      <a href="#files-list">Tệp khác</a>
       <a href="#source-url-section">Nguồn</a>
-      <a href="https://youtube.com/@quocchienn?si=dKeE3J01O6z8irh7" target="_blank" rel="noopener">Youtube</a>
+      <a href="https://youtube.com/@quocchienn?si=WeDy0l4Nu4A_HMe1" target="_blank" rel="noopener">YouTube</a>
     </div>
     <div class="nav-actions">
       <button id="theme-toggle" aria-label="Chuyển giao diện sáng / tối">🌙</button>
@@ -31,8 +32,9 @@
 <nav class="mobile-menu" id="mobile-menu">
   <a href="#packages-list">Gói</a>
   <a href="#apps-list">Ứng dụng</a>
+  <a href="#files-list">Tệp khác</a>
   <a href="#source-url-section">Nguồn</a>
-  <a href="https://youtube.com/@quocchienn?si=dKeE3J01O6z8irh7" target="_blank" rel="noopener">Youtube</a>
+  <a href="https://youtube.com/@quocchienn?si=WeDy0l4Nu4A_HMe1" target="_blank" rel="noopener">YouTube</a>
 </nav>
 
 <main class="container">
@@ -113,11 +115,30 @@
         <span aria-hidden="true">🔍</span>
         <input type="text" id="app-search-input" placeholder="Tìm app theo tên...">
       </div>
+      <div class="filters" id="app-filters"></div>
     </div>
 
     <p class="result-count" id="app-result-count"></p>
     <div class="package-grid" id="app-grid"></div>
-  </section>
+
+  <section class="packages" id="files-list">
+    <div class="section-head">
+      <div>
+        <h3>Tệp khác</h3>
+        <p>Cấu hình, chứng chỉ, plist và các file hỗ trợ khác — mỗi file kèm mô tả để biết dùng vào việc gì trước khi tải.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <span aria-hidden="true">🔍</span>
+        <input type="text" id="file-search-input" placeholder="Tìm tệp theo tên...">
+      </div>
+      <div class="filters" id="file-filters"></div>
+    </div>
+
+    <p class="result-count" id="file-result-count"></p>
+    <div class="package-grid" id="file-grid"></div>
 
 </main>
 
