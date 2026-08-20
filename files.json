@@ -1,18 +1,10 @@
 [
   {
     "name": "Cookies",
-    "extension": "zip",
+    "extension": "binarycookies",
     "type": "",
-    "size": "5 KB",
+    "size": "33 KB",
     "description": "",
-    "url": "files/Cookies.zip"
-  },
-  {
-    "name": "Khoindvn",
-    "extension": "mobileconfig",
-    "type": "",
-    "size": "16 KB",
-    "description": "",
-    "url": "files/khoindvn.mobileconfig"
+    "url": "files/Cookies.binarycookies"
   }
 ]
