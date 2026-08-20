@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 
 """
 Quét thư mục chứa các file linh tinh (config, plist, chứng chỉ, zip...)
 và tự sinh/ cập nhật files.json cho trang Sileo Repo.
