@@ -5,7 +5,14 @@
     "version": "1.1.1",
     "size": "3.1 MB",
     "category": "",
-    "description": "",
+    "description"Duyệt App Data bằng bundle identifier thay vì UUID container thay đổi theo từng máy.
+Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.
+Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.
+Dọn dẹp an toàn, giới hạn trong Library/Caches và tmp của từng ứng dụng.
+Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.
+Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
+    Mở rộng iOS được xác minh: iOS 17.0–17.7.x và iOS 18.0–18.7.1 (kexploit kernel), cùng với iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.
+",
     "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
     "url": "ipa/3105-v1.1.1-unsigned.ipa"
   },
@@ -45,7 +52,10 @@
     "version": "3.0.8",
     "size": "52.8 MB",
     "category": "",
-    "description": "",
+    "description": "Công cụ bẻ khóa Dopamine 3.0.8
+ • Hỗ trợ tất cả các thiết bị iOS 15.0 - 17.3.1
+ • Hỗ trợ A12/A13, iOS 16.6 – 18.7.1, 26.0 – 26.0.1
+",
     "icon": "",
     "url": "ipa/Dopamine_3.0.8@巨魔商店.ipa"
   },
