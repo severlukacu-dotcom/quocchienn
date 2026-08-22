@@ -1,14 +1,11 @@
-# Đặt file này vào: .github/workflows/generate-files-json.yml
-# Tự động chạy generate_files_json.py mỗi khi có thay đổi trong thư mục files/,
-# rồi commit lại files.json vào cùng nhánh. Mô tả/type bạn đã viết tay cho các
-# file cũ sẽ được giữ nguyên, chỉ file mới mới bị để trống cần điền thêm.
-
-name: Generate files.json
+name: Generate JSON Files
 
 on:
   push:
     paths:
+      - "ipa/**"
       - "files/**"
+      - "generate_apps_json.py"
       - "generate_files_json.py"
   workflow_dispatch: {}
 
@@ -18,16 +15,27 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Chạy script sinh/cập nhật files.json
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate apps.json
+        run: python3 generate_apps_json.py
+
+      - name: Generate files.json
         run: python3 generate_files_json.py
 
-      - name: Commit files.json nếu có thay đổi
+      - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add files.json
-          git diff --cached --quiet || git commit -m "chore: tự động cập nhật files.json"
-          git push
+
+          git add apps.json files.json icons/ 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "Không có thay đổi để commit."
+          else
+            git commit -m "chore: tự động cập nhật apps.json và files.json"
+            git push
+          fi
