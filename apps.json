@@ -4,80 +4,89 @@
     "bundleId": "com.openai.chat",
     "version": "1.2024.200",
     "size": "30.3 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.openai.chat.png",
-    "url": "ipa/ChatGPT_1.2024.200.ipa",
-    "description": "Ứng dụng trợ lý AI ChatGPT."
+    "url": "ipa/ChatGPT_1.2024.200.ipa"
   },
   {
     "name": "CheckURL",
     "bundleId": "CheckURL.Sniper",
     "version": "1.0",
     "size": "3.7 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/CheckURL.Sniper.png",
-    "url": "ipa/CheckURL_1.0.ipa",
-    "description": "Công cụ kiểm tra và phân tích liên kết URL."
+    "url": "ipa/CheckURL_1.0.ipa"
   },
   {
     "name": "Dopamine",
     "bundleId": "com.opa334.Dopamine-roothide",
     "version": "2.4.9.25",
     "size": "52.3 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.opa334.Dopamine-roothide.png",
-    "url": "ipa/Dopamine.ipa",
-    "description": "Công cụ jailbreak cho thiết bị iOS tương thích."
+    "url": "ipa/Dopamine.ipa"
   },
   {
     "name": "Facebook Lite",
     "bundleId": "com.quocchien.facebooklite.co",
     "version": "1.0",
     "size": "1.6 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.quocchien.facebooklite.co.png",
-    "url": "ipa/Facebook Lite.ipa",
-    "description": "Phiên bản Facebook Lite được tối ưu với dung lượng nhỏ gọn."
+    "url": "ipa/Facebook Lite.ipa"
   },
   {
     "name": "Filza",
     "bundleId": "com.tigisoftware.Filza",
     "version": "4.0",
     "size": "13.6 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.tigisoftware.Filza.png",
-    "url": "ipa/Filza.ipa",
-    "description": "Trình quản lý tệp mạnh mẽ dành cho iOS."
+    "url": "ipa/Filza.ipa"
   },
   {
     "name": "Filza",
     "bundleId": "com.tigisoftware.Filza",
     "version": "4.0",
     "size": "13.4 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.tigisoftware.Filza.png",
-    "url": "ipa/FilzaJailed.ipa",
-    "description": "Phiên bản Filza dành cho môi trường jailed, hỗ trợ quản lý tệp trên iOS."
+    "url": "ipa/FilzaJailed.ipa"
   },
   {
     "name": "Locus",
     "bundleId": "com.chrismack.locus",
     "version": "1.0.2",
     "size": "4.6 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.chrismack.locus.png",
-    "url": "ipa/Locus.ipa",
-    "description": "Ứng dụng mô phỏng vị trí GPS với bản đồ, ghim vị trí và điều khiển di chuyển."
+    "url": "ipa/Locus.ipa"
   },
   {
     "name": "PostBox",
     "bundleId": "com.simplycode.PostBox",
     "version": "0.8.1",
     "size": "8.1 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/com.simplycode.PostBox.png",
-    "url": "ipa/PostBox-0.8.1-beta.ipa",
-    "description": "Công cụ hỗ trợ quản lý và xử lý nội dung trên thiết bị iOS."
+    "url": "ipa/PostBox-0.8.1-beta.ipa"
   },
   {
     "name": "SpamSMS",
     "bundleId": "ctdotech.xcodeapptesst",
     "version": "0.2",
     "size": "4.8 MB",
+    "category": "",
+    "description": "",
     "icon": "icons/ctdotech.xcodeapptesst.png",
-    "url": "ipa/SpamSMSVip.ipa",
-    "description": "Công cụ hỗ trợ kiểm tra và xử lý tin nhắn SMS."
+    "url": "ipa/SpamSMSVip.ipa"
   }
 ]
