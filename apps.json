@@ -4,15 +4,8 @@
     "bundleId": "com.apple.mobile.MobileHouseArrest",
     "version": "1.1.1",
     "size": "3.1 MB",
-    "category": "",
-    "description"Duyệt App Data bằng bundle identifier thay vì UUID container thay đổi theo từng máy.
-Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.
-Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.
-Dọn dẹp an toàn, giới hạn trong Library/Caches và tmp của từng ứng dụng.
-Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.
-Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
-    Mở rộng iOS được xác minh: iOS 17.0–17.7.x và iOS 18.0–18.7.1 (kexploit kernel), cùng với iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.
-",
+    "category": "Tiện ích",
+    "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
     "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
     "url": "ipa/3105-v1.1.1-unsigned.ipa"
   },
@@ -21,8 +14,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.openai.chat",
     "version": "1.2024.200",
     "size": "30.3 MB",
-    "category": "",
-    "description": "",
+    "category": "AI",
+    "description": "Ứng dụng ChatGPT chính thức dành cho iPhone và iPad.\n• Trò chuyện với AI và đặt câu hỏi bằng ngôn ngữ tự nhiên.\n• Hỗ trợ viết, dịch, tóm tắt và giải thích nội dung.\n• Hỗ trợ phân tích và xử lý nhiều loại nội dung.",
     "icon": "icons/com.openai.chat.png",
     "url": "ipa/ChatGPT_1.2024.200.ipa"
   },
@@ -31,8 +24,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "CheckURL.Sniper",
     "version": "1.0",
     "size": "3.7 MB",
-    "category": "",
-    "description": "",
+    "category": "Tiện ích",
+    "description": "Công cụ kiểm tra và phân tích liên kết URL.\n• Kiểm tra nhanh địa chỉ URL.\n• Hỗ trợ phát hiện thông tin và trạng thái của liên kết.\n• Giao diện đơn giản, thuận tiện cho việc kiểm tra nhanh.",
     "icon": "icons/CheckURL.Sniper.png",
     "url": "ipa/CheckURL_1.0.ipa"
   },
@@ -41,8 +34,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.opa334.Dopamine-roothide",
     "version": "2.4.9.25",
     "size": "52.3 MB",
-    "category": "",
-    "description": "",
+    "category": "Jailbreak",
+    "description": "Công cụ jailbreak Dopamine dành cho các thiết bị iOS tương thích.\n• Hỗ trợ môi trường RootHide.\n• Cài đặt và quản lý jailbreak trực tiếp trên thiết bị.\n• Cung cấp các tùy chọn cần thiết để quản lý trạng thái jailbreak.",
     "icon": "icons/com.opa334.Dopamine-roothide.png",
     "url": "ipa/Dopamine.ipa"
   },
@@ -51,11 +44,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.opa334.Dopamine",
     "version": "3.0.8",
     "size": "52.8 MB",
-    "category": "",
-    "description": "Công cụ bẻ khóa Dopamine 3.0.8
- • Hỗ trợ tất cả các thiết bị iOS 15.0 - 17.3.1
- • Hỗ trợ A12/A13, iOS 16.6 – 18.7.1, 26.0 – 26.0.1
-",
+    "category": "Jailbreak",
+    "description": "Công cụ jailbreak Dopamine 3.0.8.\n• Hỗ trợ các thiết bị và phiên bản iOS tương thích.\n• Hỗ trợ A12/A13 và các phiên bản iOS được nhà phát triển xác nhận.\n• Giao diện quản lý jailbreak trực tiếp trên thiết bị.",
     "icon": "",
     "url": "ipa/Dopamine_3.0.8@巨魔商店.ipa"
   },
@@ -64,8 +54,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.quocchien.facebooklite.co",
     "version": "1.0",
     "size": "1.6 MB",
-    "category": "",
-    "description": "",
+    "category": "Mạng xã hội",
+    "description": "Phiên bản Facebook Lite được tối ưu với dung lượng nhỏ.\n• Truy cập mạng xã hội Facebook.\n• Hỗ trợ xem bảng tin và tương tác với nội dung.\n• Thiết kế gọn nhẹ, phù hợp với thiết bị có dung lượng lưu trữ hạn chế.",
     "icon": "icons/com.quocchien.facebooklite.co.png",
     "url": "ipa/Facebook Lite.ipa"
   },
@@ -74,8 +64,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.tigisoftware.Filza",
     "version": "4.0",
     "size": "13.6 MB",
-    "category": "",
-    "description": "",
+    "category": "Quản lý tệp",
+    "description": "Trình quản lý tệp mạnh mẽ dành cho iOS.\n• Duyệt và quản lý hệ thống tệp.\n• Sao chép, di chuyển, đổi tên và xóa tệp.\n• Hỗ trợ xem và chỉnh sửa nhiều định dạng tệp.\n• Phù hợp cho việc quản lý tệp trong môi trường iOS đã được cấp quyền.",
     "icon": "icons/com.tigisoftware.Filza.png",
     "url": "ipa/Filza.ipa"
   },
@@ -84,8 +74,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.tigisoftware.Filza",
     "version": "4.0",
     "size": "13.4 MB",
-    "category": "",
-    "description": "",
+    "category": "Quản lý tệp",
+    "description": "Phiên bản Filza dành cho môi trường iOS không jailbreak.\n• Quản lý tệp và thư mục trong phạm vi quyền được cấp.\n• Sao chép, di chuyển, đổi tên và xóa tệp.\n• Hỗ trợ duyệt và quản lý dữ liệu ứng dụng.",
     "icon": "icons/com.tigisoftware.Filza.png",
     "url": "ipa/FilzaJailed.ipa"
   },
@@ -94,8 +84,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.chrismack.locus",
     "version": "1.0.2",
     "size": "4.6 MB",
-    "category": "",
-    "description": "",
+    "category": "Tiện ích",
+    "description": "Công cụ hỗ trợ mô phỏng vị trí trên thiết bị iOS.\n• Hỗ trợ chọn vị trí trực tiếp trên bản đồ.\n• Tìm kiếm địa điểm và di chuyển nhanh đến vị trí mong muốn.\n• Hỗ trợ điều khiển vị trí theo thời gian thực.\n• Giao diện trực quan và dễ sử dụng.",
     "icon": "icons/com.chrismack.locus.png",
     "url": "ipa/Locus.ipa"
   },
@@ -104,8 +94,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "com.simplycode.PostBox",
     "version": "0.8.1",
     "size": "8.1 MB",
-    "category": "",
-    "description": "",
+    "category": "Tiện ích",
+    "description": "Công cụ quản lý và khám phá dữ liệu ứng dụng trên iOS.\n• Hỗ trợ duyệt và quản lý dữ liệu ứng dụng.\n• Cung cấp các công cụ tiện ích dành cho người dùng nâng cao.\n• Giao diện trực quan, tối ưu cho thao tác trên thiết bị iOS.",
     "icon": "icons/com.simplycode.PostBox.png",
     "url": "ipa/PostBox-0.8.1-beta.ipa"
   },
@@ -114,8 +104,8 @@ Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.
     "bundleId": "ctdotech.xcodeapptesst",
     "version": "0.2",
     "size": "4.8 MB",
-    "category": "",
-    "description": "",
+    "category": "Tiện ích",
+    "description": "Công cụ hỗ trợ kiểm thử và xử lý tin nhắn SMS.\n• Giao diện đơn giản, dễ sử dụng.\n• Phù hợp cho mục đích thử nghiệm chức năng SMS trong môi trường được phép.\n• Phiên bản thử nghiệm dành cho iOS.",
     "icon": "icons/ctdotech.xcodeapptesst.png",
     "url": "ipa/SpamSMSVip.ipa"
   }
