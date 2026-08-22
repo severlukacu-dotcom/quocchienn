@@ -39,16 +39,16 @@
     "icon": "icons/com.opa334.Dopamine-roothide.png",
     "url": "ipa/Dopamine.ipa"
   },
-  {
-    "name": "Dopamine",
-    "bundleId": "com.opa334.Dopamine",
-    "version": "3.0.8",
-    "size": "52.8 MB",
-    "category": "Jailbreak",
-    "description": "Công cụ jailbreak Dopamine 3.0.8.\n• Hỗ trợ các thiết bị và phiên bản iOS tương thích.\n• Hỗ trợ A12/A13 và các phiên bản iOS được nhà phát triển xác nhận.\n• Giao diện quản lý jailbreak trực tiếp trên thiết bị.",
-    "icon": "",
-    "url": "ipa/Dopamine_3.0.8@巨魔商店.ipa"
-  },
+{
+  "name": "Dopamine",
+  "bundleId": "com.opa334.Dopamine",
+  "version": "3.0.8",
+  "size": "52.8 MB",
+  "category": "Jailbreak",
+  "description": "Công cụ jailbreak Dopamine 3.0.8.\n• Hỗ trợ tất cả các thiết bị iOS 15.0 - 17.3.1.\n• Hỗ trợ A12/A13, iOS 16.6 – 18.7.1, 26.0 – 26.0.1.\n🆕 Phiên bản 3.0.8.",
+  "icon": "",
+  "url": "ipa/Dopamine_3.0.8@巨魔商店.ipa"
+},
   {
     "name": "Facebook Lite",
     "bundleId": "com.quocchien.facebooklite.co",
