@@ -1,5 +1,15 @@
 [
   {
+    "name": "3105",
+    "bundleId": "com.apple.mobile.MobileHouseArrest",
+    "version": "1.1.1",
+    "size": "3.1 MB",
+    "category": "",
+    "description": "",
+    "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
+    "url": "ipa/3105-v1.1.1-unsigned.ipa"
+  },
+  {
     "name": "ChatGPT",
     "bundleId": "com.openai.chat",
     "version": "1.2024.200",
@@ -28,6 +38,16 @@
     "description": "",
     "icon": "icons/com.opa334.Dopamine-roothide.png",
     "url": "ipa/Dopamine.ipa"
+  },
+  {
+    "name": "Dopamine",
+    "bundleId": "com.opa334.Dopamine",
+    "version": "3.0.8",
+    "size": "52.8 MB",
+    "category": "",
+    "description": "",
+    "icon": "",
+    "url": "ipa/Dopamine_3.0.8@巨魔商店.ipa"
   },
   {
     "name": "Facebook Lite",
