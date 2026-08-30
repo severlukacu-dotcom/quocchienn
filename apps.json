@@ -108,5 +108,15 @@
     "description": "Công cụ hỗ trợ kiểm thử chức năng SMS trên iOS.\n• Giao diện đơn giản và dễ sử dụng.\n• Hỗ trợ thử nghiệm các chức năng liên quan đến tin nhắn.\n• Phù hợp cho mục đích phát triển và kiểm thử trong môi trường được phép.\n• Phiên bản thử nghiệm dành cho iOS.",
     "icon": "icons/ctdotech.xcodeapptesst.png",
     "url": "ipa/SpamSMSVip.ipa"
+  },
+  {
+    "name": "全局高刷",
+    "bundleId": "com.yoroin.globalrefresh",
+    "version": "1.1.0fix",
+    "size": "7.2 MB",
+    "category": "",
+    "description": "",
+    "icon": "",
+    "url": "ipa/全局高刷120hz_1.1.0fix_.ipa"
   }
 ]
