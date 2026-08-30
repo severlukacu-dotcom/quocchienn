@@ -10,16 +10,6 @@
     "url": "ipa/3105-2.0-beta3-unsigned.ipa"
   },
   {
-    "name": "3105",
-    "bundleId": "com.apple.mobile.MobileHouseArrest",
-    "version": "2.0",
-    "size": "3.8 MB",
-    "category": "Tiện ích",
-    "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
-    "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
-    "url": "ipa/3105-2.0-build8-beta-dialer-20260829-unsigned.ipa"
-  },
-  {
     "name": "ChatGPT",
     "bundleId": "com.openai.chat",
     "version": "1.2024.200",
