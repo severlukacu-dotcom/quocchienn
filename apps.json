@@ -2,6 +2,16 @@
   {
     "name": "3105",
     "bundleId": "com.apple.mobile.MobileHouseArrest",
+    "version": "2.0",
+    "size": "3.8 MB",
+    "category": "Tiện ích",
+    "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
+    "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
+    "url": "ipa/3105-2.0-build8-beta-unsigned.ipa"
+  },
+  {
+    "name": "3105",
+    "bundleId": "com.apple.mobile.MobileHouseArrest",
     "version": "1.1.1",
     "size": "3.1 MB",
     "category": "Tiện ích",
@@ -65,7 +75,7 @@
     "version": "4.0",
     "size": "13.6 MB",
     "category": "Quản lý tệp",
-    "description": "Trình quản lý tệp mạnh mẽ dành cho iOS.\n• Duyệt và quản lý tệp, thư mục.\n• Sao chép, di chuyển, đổi tên và xóa tệp.\n• Tạo thư mục và quản lý dữ liệu ứng dụng.\n• Hỗ trợ xem và xử lý nhiều định dạng tệp.\n• Phù hợp với người dùng iOS nâng cao.",
+    "description": "Phiên bản Filza dành cho môi trường iOS không jailbreak.\n• Quản lý tệp và thư mục trong phạm vi quyền được cấp.\n• Sao chép, di chuyển, đổi tên và xóa tệp.\n• Hỗ trợ duyệt dữ liệu ứng dụng.\n• Giao diện quản lý tệp trực quan và dễ sử dụng.",
     "icon": "icons/com.tigisoftware.Filza.png",
     "url": "ipa/Filza.ipa"
   },
