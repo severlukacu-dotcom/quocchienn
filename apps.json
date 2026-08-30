@@ -3,6 +3,16 @@
     "name": "3105",
     "bundleId": "com.apple.mobile.MobileHouseArrest",
     "version": "2.0",
+    "size": "4.0 MB",
+    "category": "Tiện ích",
+    "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
+    "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
+    "url": "ipa/3105-2.0-beta3-unsigned.ipa"
+  },
+  {
+    "name": "3105",
+    "bundleId": "com.apple.mobile.MobileHouseArrest",
+    "version": "2.0",
     "size": "3.8 MB",
     "category": "Tiện ích",
     "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
@@ -116,7 +126,7 @@
     "size": "7.2 MB",
     "category": "Tiện ích",
     "description": "🪡 Sửa lỗi toàn hệ thống, tần số quét cao 120Hz, phiên bản 1.1.0.\n\n• Áp dụng tần số quét 0–120Hz cho toàn hệ thống, giúp thao tác mượt mà hơn và hỗ trợ tối đa iOS 27.\n• Nguyên lý: sử dụng cửa sổ nổi để ép tần số quét lên 120Hz. Có thể đặt giá trị nhỏ nhất 0.1pt để cửa sổ nổi tự động ẩn.\n• Hỗ trợ sử dụng ID hoặc chứng chỉ.\n• Nhược điểm: một số ứng dụng video khác không thể sử dụng cửa sổ nổi.\n\n🆕 Sửa lỗi\n• Khắc phục lỗi sau khi cửa sổ nổi bị các ứng dụng hình trong hình chiếm chỗ khiến không nhận được thông báo trên iOS 15–iOS 18.\n• Tối ưu hóa logic hiển thị thời gian đóng cửa sổ gần nhất.\n\n🐱 Tần số quét cao toàn hệ thống.",
-    "icon": "icons/com.yoroin.globalrefresh.png",
+    "icon": "",
     "url": "ipa/全局高刷120hz_1.1.0fix.ipa"
   }
 ]
