@@ -453,7 +453,7 @@
         <div class="pkg-desc mono" style="font-size:11px; opacity:.7;">${a.bundleId || ''}</div>
         <div class="pkg-footer">
           <a class="pkg-get" href="${a.url}">Tải .ipa</a>
-          <a class="pkg-get" style="background:var(--accent); color:#fff;" href="altstore://install?url=${encodeURIComponent(a.url)}">Mở bằng AltStore</a>
+          <a class="pkg-get" style="background:var(--accent); color:#fff;" href="livecontainer://install?url=${encodeURIComponent(a.url)}">Mở bằng Livecontainer</a>
         </div>
       </div>
     `;
