@@ -116,7 +116,7 @@
     "size": "7.2 MB",
     "category": "Tiện ích",
     "description": "🪡 Sửa lỗi toàn hệ thống, tần số quét cao 120Hz, phiên bản 1.1.0.\n\n• Áp dụng tần số quét 0–120Hz cho toàn hệ thống, giúp thao tác mượt mà hơn và hỗ trợ tối đa iOS 27.\n• Nguyên lý: sử dụng cửa sổ nổi để ép tần số quét lên 120Hz. Có thể đặt giá trị nhỏ nhất 0.1pt để cửa sổ nổi tự động ẩn.\n• Hỗ trợ sử dụng ID hoặc chứng chỉ.\n• Nhược điểm: một số ứng dụng video khác không thể sử dụng cửa sổ nổi.\n\n🆕 Sửa lỗi\n• Khắc phục lỗi sau khi cửa sổ nổi bị các ứng dụng hình trong hình chiếm chỗ khiến không nhận được thông báo trên iOS 15–iOS 18.\n• Tối ưu hóa logic hiển thị thời gian đóng cửa sổ gần nhất.\n\n🐱 Tần số quét cao toàn hệ thống.",
-    "icon": "",
+    "icon": "icons/com.yoroin.globalrefresh.png",
     "url": "ipa/全局高刷120hz_1.1.0fix.ipa"
   }
 ]
