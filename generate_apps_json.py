@@ -18,6 +18,12 @@ Lưu ý về icon: từ iOS 11 trở đi, hầu hết app đóng icon vào Asset
 Script sẽ thử tìm icon PNG rời (nếu app có ship kèm để tương thích ngược);
 nếu không có, field "icon" sẽ để trống — trang web đã có fallback hiện
 chữ cái đầu, không vỡ giao diện.
+
+Lưu ý về "category" và "description": IPA không chứa sẵn 2 thông tin này,
+nên script sẽ GIỮ NGUYÊN những gì bạn đã tự viết tay trong apps.json từ lần
+chạy trước (so khớp theo "bundleId" — ổn định hơn tên file vì không đổi
+khi bạn đổi tên file .ipa). Chỉ app hoàn toàn mới mới bị để trống 2 field
+này, cần bạn điền tiếp.
 """
 
 import json
@@ -30,6 +36,17 @@ from pathlib import Path
 IPA_DIR = Path(os.environ.get("IPA_DIR", "ipa"))
 ICONS_DIR = Path(os.environ.get("ICONS_DIR", "icons"))
 OUTPUT = Path(os.environ.get("OUTPUT", "apps.json"))
+
+
+def load_existing(output: Path):
+    """Đọc apps.json cũ (nếu có) và index theo bundleId để giữ lại category/description đã viết tay."""
+    if not output.exists():
+        return {}
+    try:
+        data = json.loads(output.read_text(encoding="utf-8"))
+        return {entry.get("bundleId"): entry for entry in data if isinstance(entry, dict) and entry.get("bundleId")}
+    except Exception:
+        return {}
 
 
 def find_info_plist_path(zf: zipfile.ZipFile) -> str | None:
@@ -90,7 +107,9 @@ def main():
         return
 
     ICONS_DIR.mkdir(exist_ok=True)
+    existing_by_bundle_id = load_existing(OUTPUT)
     apps = []
+    new_count = 0
 
     for ipa_path in ipa_files:
         try:
@@ -115,18 +134,29 @@ def main():
                     (ICONS_DIR / icon_filename).write_bytes(icon_bytes)
                     icon_rel_path = f"{ICONS_DIR.as_posix()}/{icon_filename}"
 
+                prior = existing_by_bundle_id.get(bundle_id)
+                if prior:
+                    category = prior.get("category", "")
+                    description = prior.get("description", "")
+                else:
+                    category = ""
+                    description = ""
+                    new_count += 1
+
                 entry = {
                     "name": name,
                     "bundleId": bundle_id,
                     "version": str(version),
                     "size": format_size(ipa_path.stat().st_size),
-                    "category": "",
-                    "description": "",
+                    "category": category,
+                    "description": description,
                     "icon": icon_rel_path or "",
                     "url": f"{IPA_DIR.as_posix()}/{ipa_path.name}",
                 }
                 apps.append(entry)
-                print(f"[OK] {ipa_path.name} -> {name} v{version}" + (" (icon tìm thấy)" if icon_rel_path else " (không có icon rời)"))
+                tag = " (icon tìm thấy)" if icon_rel_path else " (không có icon rời)"
+                tag += "" if prior else " — MỚI, cần điền category/description"
+                print(f"[OK] {ipa_path.name} -> {name} v{version}{tag}")
 
         except zipfile.BadZipFile:
             print(f"[Lỗi] {ipa_path.name}: không phải file zip/ipa hợp lệ")
@@ -134,8 +164,8 @@ def main():
             print(f"[Lỗi] {ipa_path.name}: {e}")
 
     OUTPUT.write_text(json.dumps(apps, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"\nĐã ghi {len(apps)} app vào {OUTPUT}")
-    print("Lưu ý: field 'category' và 'description' được để trống vì IPA không chứa sẵn thông tin này — hãy tự điền tay vào apps.json sau khi script chạy xong.")
+    print(f"\nĐã ghi {len(apps)} app vào {OUTPUT} ({new_count} app mới cần điền category/description).")
+    print("Mô tả/category của các app đã có từ trước được giữ nguyên, không bị ghi đè.")
 
 
 if __name__ == "__main__":
