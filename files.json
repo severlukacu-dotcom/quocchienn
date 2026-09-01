@@ -1,12 +1,12 @@
 [
-  {
-    "name": "Bock My Iphone",
-    "extension": "config",
-    "type": "",
-    "size": "806 B",
-    "description": "Chặn Tìm iPhone (Block My iPhone).\n• Những gì bạn sẽ làm được:\n• Chặn triệt để tính năng Find My iPhone - Xóa sạch cảnh báo "Tìm iPhone" trên màn hình.\n• Xử lý khóa máy từ xa (Lost Mode) do vay iCloud hoặc chủ cũ.\n• Sử dụng máy bình thường, không lo bị khóa đột ngột.",
-    "url": "files/Bock My iPhone.config"
-  },
+{
+  "name": "Bock My iPhone",
+  "extension": "config",
+  "type": "Configuration Profile",
+  "size": "807 B",
+  "description": "Chặn Tìm iPhone (Block My iPhone).\n• Được cung cấp dưới dạng configuration profile.\n• Chặn triệt để tính năng Find My iPhone, Xóa sạch cảnh báo "Tìm iPhone" trên màn hình.\n• Xử lý khóa máy từ xa (Lost Mode) do vay iCloud hoặc chủ sở hữu, Sử dụng máy bình thường, không lo bị khóa đột ngột.",
+  "url": "files/Bock My iPhone.config"
+}
   {
     "name": "Capcut",
     "extension": "3105",
