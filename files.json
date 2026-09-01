@@ -1,18 +1,10 @@
 [
-{
-  "name": "Bock My Iphone",
-  "extension": "config",
-  "type": "",
-  "size": "807 B",
-  "description": "Chặn triệt để Find My iPhone, xóa sạch cảnh báo trên màn hình,\n • Xử lý khóa máy từ xa (Lost Mode) do vay iCloud hoặc chủ cũ.\n • Giúp máy hoạt động bình thường, không lo bị khóa đột ngột.",
-  "url": "files/Bock My iPhone.config"
-}
   {
     "name": "Capcut",
     "extension": "3105",
     "type": "",
     "size": "18 KB",
-    "description": "Unlock Pro CapCut Dùng App 3105 Unlock.",
+    "description": "",
     "url": "files/Capcut.3105"
   },
   {
@@ -20,7 +12,7 @@
     "extension": "binarycookies",
     "type": "",
     "size": "33 KB",
-    "description": "Unlock Pro CapCut Dùng Filza Unlock.",
+    "description": "",
     "url": "files/Cookies.binarycookies"
   },
   {
@@ -28,7 +20,7 @@
     "extension": "3105",
     "type": "",
     "size": "136 KB",
-    "description": "Unlock Hack Map Liên Quân Free Dùng app 3105 Unlock Map.Pas Là quocchienn",
+    "description": "",
     "url": "files/Map LQ FREE.3105"
   }
 ]
