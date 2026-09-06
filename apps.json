@@ -1,14 +1,14 @@
 [
   {
-    "name": "3105",
-    "bundleId": "com.apple.mobile.MobileHouseArrest",
-    "version": "2.0",
-    "size": "4.0 MB",
-    "category": "Tiện ích",
-    "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.",
-    "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
-    "url": "ipa/3105-2.0-beta3-unsigned.ipa"
-  },
+  "name": "3105",
+  "bundleId": "com.apple.mobile.MobileHouseArrest",
+  "version": "2.0",
+  "size": "4.0 MB",
+  "category": "Tiện ích",
+  "description": "Duyệt App Data bằng Bundle Identifier thay vì UUID container thay đổi theo từng máy.\n• Quản lý tệp: tìm kiếm, nhập nhiều tệp, đổi tên, xóa và tạo tệp/thư mục.\n• Tạo, nhập và áp dụng patch .3105 với nhiều quy tắc và mật khẩu tùy chọn.\n• Dọn dẹp an toàn trong Library/Caches và tmp của từng ứng dụng.\n• Nhập gói hình nền .tendies và reset nội dung do 3105 cài đặt.\n• Hỗ trợ tiếng Anh, tiếng Việt và tiếng Trung giản thể.\n• Hỗ trợ iOS 17.0–17.7.x, iOS 18.0–18.7.1, iOS 26.0–26.6.1 và iOS 27.0 Developer Beta 1–4 / Public Beta 1–2.\n\n💎 Đã khắc phục hàng loạt lỗi Patch, bao gồm lỗi Apply với App Group.\n💎 Hỗ trợ một Patch chứa nhiều bundle và tự bỏ qua bundle không có trên máy.\n💎 Cải thiện Khôi phục/Xoá/Đổi Patch đang hoạt động.\n💎 Sửa lỗi nhập Patch mật khẩu và đưa trở lại Patch riêng tư.\n💎 Cơ chế Patch mới hỗ trợ thêm, sửa, xoá plist/JSON, settings.json và key thay đổi theo từng thiết bị.\n💎 Sửa lỗi hình nền .tendies tải từ repo nhưng không hoạt động, chuẩn hoá cấu trúc gói tải về, kiểm tra asset/descriptor để hạn chế hình nền bị đen, đồng thời cải thiện tốc độ tải ảnh, quá trình Apply, backup và khôi phục hình nền.\n💎 Sửa cài đặt Dialer .3105pass từ repo, tự nhận diện Light/Dark/Bold, cải thiện trình quản lý tệp, hiển thị file ẩn và sửa lỗi nút Back bị kẹt trong folder.",
+  "icon": "icons/com.apple.mobile.MobileHouseArrest.png",
+  "url": "ipa/3105-2.0-beta3-unsigned.ipa"
+},
   {
     "name": "ChatGPT",
     "bundleId": "com.openai.chat",
